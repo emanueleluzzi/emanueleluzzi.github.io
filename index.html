@@ -1,10 +1,317 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Personal Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Financial Economics PhD Candidate</title>
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* Container for max-width and centering */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header section with profile */
+        .header {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .profile-section {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e0e0e0;
+        }
+        
+        .profile-info h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .profile-info h2 {
+            font-size: 1.3em;
+            color: #666;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            margin-top: 15px;
+        }
+        
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main content sections */
+        .section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        /* Papers styling */
+        .paper {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .paper-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .paper-details {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .paper-abstract {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .paper-abstract h4 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .paper-image {
+            flex: 0 0 300px;
+            text-align: center;
+        }
+        
+        .paper-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .paper-image p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .paper-details {
+                flex-direction: column;
+            }
+            
+            .paper-image {
+                flex: 1;
+            }
+        }
+        
+        /* Additional styling for links and buttons */
+        .download-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        
+        .download-link:hover {
+            background-color: #0052a3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello from my future Page!</h1>
-    <p>This site is currently under construction. Please check back soon!</p>
+    <!-- Header with profile information -->
+    <div class="container">
+        <div class="header">
+            <div class="profile-section">
+                <img src="profile-photo.jpg" alt="Your Name" class="profile-image">
+                <div class="profile-info">
+                    <h1>Your Name</h1>
+                    <h2>PhD Candidate in Financial Economics</h2>
+                    <p><strong>University Name</strong> | Department of Economics</p>
+                    <p><strong>Research Interests:</strong> Market Microstructure, Financial Econometrics, Data Science</p>
+                    <div class="contact-info">
+                        <a href="mailto:your.email@university.edu">📧 Email</a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+                        <a href="cv.pdf" target="_blank">📄 CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About section -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>
+                I am a PhD candidate in Financial Economics at [University Name], expecting to graduate in [Year]. 
+                My research focuses on market microstructure, with particular emphasis on [specific area]. 
+                I combine rigorous economic theory with advanced data science techniques to investigate [research topics].
+            </p>
+            <p>
+                Prior to my doctoral studies, I [previous experience/education]. I am passionate about 
+                applying machine learning and econometric methods to understand financial markets and 
+                contribute to both academic literature and practical applications in finance.
+            </p>
+        </div>
+        
+        <!-- Research section -->
+        <div class="section">
+            <h2>Research</h2>
+            
+            <!-- Working Papers -->
+            <h3>Working Papers</h3>
+            
+            <div class="paper">
+                <div class="paper-title">
+                    Paper Title 1: Your First Working Paper Title Here
+                </div>
+                <div class="paper-details">
+                    <div class="paper-abstract">
+                        <h4>Abstract</h4>
+                        <p>
+                            This paper examines [topic]. Using [methodology], I find that [main findings]. 
+                            These results have important implications for [implications]. The paper contributes 
+                            to the literature by [contributions].
+                        </p>
+                        <a href="paper1.pdf" class="download-link" target="_blank">Download PDF</a>
+                    </div>
+                    <div class="paper-image">
+                        <img src="paper1-figure.png" alt="Key Figure from Paper 1">
+                        <p>Figure 1: Main Result Visualization</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paper">
+                <div class="paper-title">
+                    Paper Title 2: Your Second Working Paper Title Here
+                </div>
+                <div class="paper-details">
+                    <div class="paper-abstract">
+                        <h4>Abstract</h4>
+                        <p>
+                            In this paper, I investigate [topic]. The analysis reveals [findings]. 
+                            This research extends existing work by [extensions] and provides new insights 
+                            into [insights].
+                        </p>
+                        <a href="paper2.pdf" class="download-link" target="_blank">Download PDF</a>
+                    </div>
+                    <div class="paper-image">
+                        <img src="paper2-figure.png" alt="Key Figure from Paper 2">
+                        <p>Figure 2: Empirical Results</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Work in Progress -->
+            <h3>Work in Progress</h3>
+            
+            <div class="paper">
+                <div class="paper-title">
+                    Work in Progress 1: Title of Your Current Project
+                </div>
+                <div class="paper-details">
+                    <div class="paper-abstract">
+                        <h4>Abstract</h4>
+                        <p>
+                            This ongoing research explores [topic]. Preliminary findings suggest [early results]. 
+                            The project aims to [objectives] and is expected to be completed by [timeline].
+                        </p>
+                    </div>
+                    <div class="paper-image">
+                        <img src="wip1-figure.png" alt="Preliminary Results">
+                        <p>Preliminary Analysis</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paper">
+                <div class="paper-title">
+                    Work in Progress 2: Another Current Project
+                </div>
+                <div class="paper-details">
+                    <div class="paper-abstract">
+                        <h4>Abstract</h4>
+                        <p>
+                            Building on [previous work], this project investigates [new angle]. 
+                            Using [methodology], I am currently analyzing [data/approach] to understand [research question].
+                        </p>
+                    </div>
+                    <div class="paper-image">
+                        <img src="wip2-figure.png" alt="Research Framework">
+                        <p>Conceptual Framework</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
