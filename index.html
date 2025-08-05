@@ -1,84 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- META TAGS: These provide information about your webpage -->
+    <meta charset="UTF-8"> <!-- Tells browser which character encoding to use -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site mobile-friendly -->
+    
+    <!-- TITLE: This appears in the browser tab -->
     <title>Your Name - Financial Economics PhD Candidate</title>
     
+    <!-- CSS STYLING: This section controls how your page looks -->
     <style>
-        /* Reset and base styles */
+        /* RESET STYLES: Removes default browser styling for consistency */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0;          /* Removes default spacing outside elements */
+            padding: 0;         /* Removes default spacing inside elements */
+            box-sizing: border-box;  /* Makes width/height calculations easier */
         }
         
+        /* BODY: Main page styling */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;  /* Professional font stack */
+            line-height: 1.6;           /* Space between lines of text */
+            color: #333;                /* Dark gray text color */
+            background-color: #f8f9fa;  /* Light gray background */
         }
         
-        /* Container for max-width and centering */
+        /* CONTAINER: Centers your content and sets maximum width */
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 1000px;    /* Content won't be wider than 1000 pixels */
+            margin: 0 auto;       /* Centers the container */
+            padding: 20px;        /* Space around the edges */
         }
         
-        /* Header section with profile */
+        /* HEADER: The top section with your photo and basic info */
         .header {
             background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+            padding: 40px;              /* Space inside the box */
+            border-radius: 10px;        /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Subtle shadow effect */
+            margin-bottom: 30px;        /* Space below this section */
         }
         
+        /* PROFILE SECTION: Layout for photo and info side-by-side */
         .profile-section {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            flex-wrap: wrap;
+            display: flex;        /* Makes items appear side-by-side */
+            gap: 40px;           /* Space between photo and text */
+            align-items: center; /* Vertically centers items */
+            flex-wrap: wrap;     /* Allows wrapping on small screens */
         }
         
+        /* PROFILE IMAGE: Your photo styling */
         .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #e0e0e0;
+            width: 200px;              /* Fixed width */
+            height: 200px;             /* Fixed height */
+            border-radius: 50%;        /* Makes image circular */
+            object-fit: cover;         /* Ensures image fills circle properly */
+            border: 4px solid #e0e0e0; /* Gray border around photo */
         }
         
+        /* YOUR NAME: Large heading styling */
         .profile-info h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #1a1a1a;
+            font-size: 2.5em;     /* 2.5 times normal text size */
+            margin-bottom: 10px;  /* Space below name */
+            color: #1a1a1a;       /* Very dark gray */
         }
         
+        /* SUBTITLE: PhD Candidate text */
         .profile-info h2 {
             font-size: 1.3em;
-            color: #666;
-            font-weight: normal;
+            color: #666;          /* Medium gray */
+            font-weight: normal;  /* Not bold */
             margin-bottom: 20px;
         }
         
+        /* CONTACT LINKS: Email, LinkedIn, CV styling */
         .contact-info {
             margin-top: 15px;
         }
         
         .contact-info a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 20px;
+            color: #0066cc;         /* Blue color for links */
+            text-decoration: none;  /* Removes underline */
+            margin-right: 20px;     /* Space between links */
         }
         
         .contact-info a:hover {
-            text-decoration: underline;
+            text-decoration: underline;  /* Underline appears when hovering */
         }
         
-        /* Main content sections */
+        /* MAIN SECTIONS: About Me and Research sections */
         .section {
             background-color: white;
             padding: 40px;
@@ -87,29 +97,32 @@
             margin-bottom: 30px;
         }
         
+        /* SECTION TITLES: "About Me", "Research" */
         .section h2 {
             font-size: 2em;
             margin-bottom: 30px;
             color: #1a1a1a;
-            border-bottom: 3px solid #0066cc;
+            border-bottom: 3px solid #0066cc;  /* Blue underline */
             padding-bottom: 10px;
         }
         
+        /* SUBSECTION TITLES: "Working Papers", "Work in Progress" */
         .section h3 {
             font-size: 1.5em;
             margin-bottom: 20px;
             color: #333;
         }
         
-        /* Papers styling */
+        /* PAPER CONTAINER: Box for each paper */
         .paper {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #0066cc;
+            margin-bottom: 40px;         /* Space between papers */
+            padding: 20px;               /* Space inside paper box */
+            background-color: #f8f9fa;   /* Light gray background */
+            border-radius: 8px;          /* Rounded corners */
+            border-left: 4px solid #0066cc;  /* Blue accent border on left */
         }
         
+        /* PAPER TITLE: Title of each research paper */
         .paper-title {
             font-size: 1.3em;
             font-weight: bold;
@@ -117,104 +130,135 @@
             color: #1a1a1a;
         }
         
+        /* PAPER LAYOUT: Abstract and figure side-by-side */
         .paper-details {
-            display: flex;
-            gap: 30px;
+            display: flex;         /* Side-by-side layout */
+            gap: 30px;            /* Space between abstract and figure */
             margin-top: 15px;
-            flex-wrap: wrap;
+            flex-wrap: wrap;      /* Allows wrapping on small screens */
         }
         
+        /* ABSTRACT SECTION: Text part of each paper */
         .paper-abstract {
-            flex: 1;
-            min-width: 300px;
+            flex: 1;              /* Takes up available space */
+            min-width: 300px;     /* Minimum width before wrapping */
         }
         
+        /* ABSTRACT HEADING: The word "Abstract" */
         .paper-abstract h4 {
             font-size: 1.1em;
             margin-bottom: 10px;
             color: #333;
         }
         
+        /* FIGURE SECTION: Image part of each paper */
         .paper-image {
-            flex: 0 0 300px;
-            text-align: center;
+            flex: 0 0 300px;      /* Fixed width of 300px */
+            text-align: center;   /* Centers image and caption */
         }
         
+        /* FIGURE IMAGE: The actual image styling */
         .paper-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 100%;           /* Image won't exceed container */
+            height: auto;              /* Maintains aspect ratio */
+            border-radius: 5px;        /* Slightly rounded corners */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Subtle shadow */
         }
         
+        /* FIGURE CAPTION: Text below images */
         .paper-image p {
             margin-top: 10px;
-            font-size: 0.9em;
-            color: #666;
-            font-style: italic;
+            font-size: 0.9em;     /* Slightly smaller text */
+            color: #666;          /* Gray color */
+            font-style: italic;   /* Italic text */
         }
         
-        /* Responsive design */
+        /* MOBILE RESPONSIVENESS: Changes layout for phones/tablets */
         @media (max-width: 768px) {
+            /* Stack profile items vertically on small screens */
             .profile-section {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: column;  /* Stack vertically */
+                text-align: center;      /* Center align text */
             }
             
+            /* Stack paper details vertically on small screens */
             .paper-details {
                 flex-direction: column;
             }
             
+            /* Make images full width on mobile */
             .paper-image {
                 flex: 1;
             }
         }
         
-        /* Additional styling for links and buttons */
+        /* DOWNLOAD BUTTON: PDF download link styling */
         .download-link {
-            display: inline-block;
+            display: inline-block;       /* Makes link behave like a button */
             margin-top: 10px;
-            padding: 8px 16px;
-            background-color: #0066cc;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+            padding: 8px 16px;          /* Space inside button */
+            background-color: #0066cc;   /* Blue background */
+            color: white;               /* White text */
+            text-decoration: none;      /* No underline */
+            border-radius: 5px;         /* Rounded corners */
             font-size: 0.9em;
         }
         
         .download-link:hover {
-            background-color: #0052a3;
+            background-color: #0052a3;   /* Darker blue on hover */
         }
     </style>
 </head>
+
+<!-- BODY: This is where your visible content goes -->
 <body>
-    <!-- Header with profile information -->
+    <!-- MAIN CONTAINER: Wraps all content -->
     <div class="container">
+        
+        <!-- HEADER SECTION: Your profile information -->
         <div class="header">
             <div class="profile-section">
+                <!-- YOUR PHOTO: Change 'profile-photo.jpg' to your actual image filename -->
                 <img src="profile-photo.jpg" alt="Your Name" class="profile-image">
+                
+                <!-- YOUR INFO: Replace all placeholder text -->
                 <div class="profile-info">
-                    <h1>Your Name</h1>
+                    <h1>Your Name</h1>  <!-- Replace with your actual name -->
                     <h2>PhD Candidate in Financial Economics</h2>
+                    
+                    <!-- UNIVERSITY INFO: Update with your details -->
                     <p><strong>University Name</strong> | Department of Economics</p>
+                    
+                    <!-- RESEARCH INTERESTS: List your main research areas -->
                     <p><strong>Research Interests:</strong> Market Microstructure, Financial Econometrics, Data Science</p>
+                    
+                    <!-- CONTACT LINKS: Update href attributes with your actual links -->
                     <div class="contact-info">
+                        <!-- Email link: Replace with your email -->
                         <a href="mailto:your.email@university.edu">📧 Email</a>
+                        
+                        <!-- LinkedIn: Replace with your LinkedIn URL -->
                         <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+                        
+                        <!-- CV: Make sure to upload cv.pdf to your repository -->
                         <a href="cv.pdf" target="_blank">📄 CV</a>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- About section -->
+        <!-- ABOUT ME SECTION: Your bio and background -->
         <div class="section">
             <h2>About Me</h2>
+            
+            <!-- PARAGRAPH 1: Main introduction - customize this text -->
             <p>
                 I am a PhD candidate in Financial Economics at [University Name], expecting to graduate in [Year]. 
                 My research focuses on market microstructure, with particular emphasis on [specific area]. 
                 I combine rigorous economic theory with advanced data science techniques to investigate [research topics].
             </p>
+            
+            <!-- PARAGRAPH 2: Background and interests - customize this text -->
             <p>
                 Prior to my doctoral studies, I [previous experience/education]. I am passionate about 
                 applying machine learning and econometric methods to understand financial markets and 
@@ -222,34 +266,45 @@
             </p>
         </div>
         
-        <!-- Research section -->
+        <!-- RESEARCH SECTION: Your papers and projects -->
         <div class="section">
             <h2>Research</h2>
             
-            <!-- Working Papers -->
+            <!-- WORKING PAPERS SUBSECTION -->
             <h3>Working Papers</h3>
             
+            <!-- PAPER 1: Copy this entire div to add more papers -->
             <div class="paper">
+                <!-- Paper title - replace with your actual paper title -->
                 <div class="paper-title">
                     Paper Title 1: Your First Working Paper Title Here
                 </div>
+                
                 <div class="paper-details">
+                    <!-- Abstract section -->
                     <div class="paper-abstract">
                         <h4>Abstract</h4>
+                        <!-- Replace with your actual abstract -->
                         <p>
                             This paper examines [topic]. Using [methodology], I find that [main findings]. 
                             These results have important implications for [implications]. The paper contributes 
                             to the literature by [contributions].
                         </p>
+                        <!-- PDF link - make sure to upload paper1.pdf to your repository -->
                         <a href="paper1.pdf" class="download-link" target="_blank">Download PDF</a>
                     </div>
+                    
+                    <!-- Figure section -->
                     <div class="paper-image">
+                        <!-- Replace src with your actual figure filename -->
                         <img src="paper1-figure.png" alt="Key Figure from Paper 1">
+                        <!-- Figure caption -->
                         <p>Figure 1: Main Result Visualization</p>
                     </div>
                 </div>
             </div>
             
+            <!-- PAPER 2: Another working paper -->
             <div class="paper">
                 <div class="paper-title">
                     Paper Title 2: Your Second Working Paper Title Here
@@ -271,9 +326,10 @@
                 </div>
             </div>
             
-            <!-- Work in Progress -->
+            <!-- WORK IN PROGRESS SUBSECTION -->
             <h3>Work in Progress</h3>
             
+            <!-- WIP 1: Current project (no PDF link since it's in progress) -->
             <div class="paper">
                 <div class="paper-title">
                     Work in Progress 1: Title of Your Current Project
@@ -293,6 +349,7 @@
                 </div>
             </div>
             
+            <!-- WIP 2: Another current project -->
             <div class="paper">
                 <div class="paper-title">
                     Work in Progress 2: Another Current Project
@@ -311,7 +368,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            
+        </div> <!-- End of research section -->
+        
+    </div> <!-- End of main container -->
 </body>
 </html>
