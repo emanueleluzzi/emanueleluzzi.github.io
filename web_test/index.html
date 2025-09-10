@@ -85,9 +85,29 @@
             scroll-margin-top: 80px;
         }
         
-        /* Introduction Section */
+        /* Introduction Section with Profile Image */
         .intro {
             margin-bottom: 120px;
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        
+        .profile-image-container {
+            flex-shrink: 0;
+        }
+        
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            object-fit: cover;
+            background: var(--light-gray);
+            border: 1px solid var(--border-color);
+        }
+        
+        .intro-content {
+            flex: 1;
         }
         
         .intro h1 {
@@ -117,6 +137,13 @@
             margin-bottom: 30px;
         }
         
+        .intro .bio {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-top: 25px;
+        }
+        
         .contact-links {
             display: flex;
             gap: 25px;
@@ -138,18 +165,7 @@
             border-color: var(--border-color);
         }
         
-        /* About Section */
-        .about-content {
-            font-size: 17px;
-            line-height: 1.8;
-            color: #444;
-        }
-        
-        .about-content p {
-            margin-bottom: 20px;
-        }
-        
-        /* Research Section */
+        /* Section Headers */
         h2 {
             font-size: 28px;
             font-weight: 600;
@@ -158,6 +174,7 @@
             letter-spacing: -0.3px;
         }
         
+        /* Research Section */
         .papers-list {
             margin-top: 40px;
         }
@@ -182,12 +199,15 @@
             gap: 20px;
         }
         
+        .paper-title-section {
+            flex: 1;
+        }
+        
         .paper-title {
             font-size: 18px;
             font-weight: 500;
             color: var(--primary-color);
             line-height: 1.5;
-            flex: 1;
         }
         
         .expand-icon {
@@ -216,8 +236,39 @@
         }
         
         .paper-item.expanded .paper-details {
-            max-height: 1000px;
-            margin-top: 20px;
+            max-height: 2000px;
+            margin-top: 25px;
+        }
+        
+        .paper-content {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .paper-text {
+            flex: 1;
+        }
+        
+        .paper-figure {
+            flex-shrink: 0;
+            width: 250px;
+        }
+        
+        .paper-figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            background: white;
+        }
+        
+        .figure-caption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            text-align: center;
+            font-style: italic;
         }
         
         .abstract-label {
@@ -258,6 +309,65 @@
             color: white;
         }
         
+        /* Discussions Section */
+        .discussions-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .discussion-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+        
+        .discussion-title {
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .discussion-date {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        
+        /* Teaching Section */
+        .teaching-content {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .course-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--light-gray);
+            border-radius: 8px;
+        }
+        
+        .course-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        
+        .course-details {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .course-description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
         /* Footer */
         footer {
             text-align: center;
@@ -285,6 +395,16 @@
                 padding: 100px 20px 60px;
             }
             
+            .intro {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            
             .intro h1 {
                 font-size: 32px;
             }
@@ -299,6 +419,14 @@
             
             .contact-links {
                 flex-wrap: wrap;
+            }
+            
+            .paper-content {
+                flex-direction: column;
+            }
+            
+            .paper-figure {
+                width: 100%;
             }
             
             .paper-header {
@@ -324,9 +452,10 @@
             <div class="nav-name">Emanuele Luzzi</div>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
                 <a href="#research">Research</a>
                 <a href="cv.pdf" target="_blank">CV</a>
+                <a href="#discussions">Discussions</a>
+                <a href="#teaching">Teaching</a>
             </div>
         </div>
     </nav>
@@ -335,29 +464,24 @@
     <div class="container">
         <!-- Introduction Section -->
         <section id="home" class="intro">
-            <h1>Emanuele Luzzi</h1>
-            <div class="subtitle">PhD Candidate in Finance</div>
-            <div class="affiliation">Swiss Finance Institute @ USI Lugano</div>
-            <div class="interests">
-                <strong>Research Interests:</strong> Financial Intermediation, Asset Pricing, Machine Learning
+            <div class="profile-image-container">
+                <img src="https://via.placeholder.com/180x180/f0f0f0/666?text=Profile" alt="Emanuele Luzzi" class="profile-image">
             </div>
-            <div class="contact-links">
-                <a href="mailto:emanuele.luzzi@usi.ch">Email</a>
-                <a href="https://www.linkedin.com/in/emanuele-luzzi-6bb39a124/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/emanueleLuzzi" target="_blank">GitHub</a>
-            </div>
-        </section>
-        
-        <!-- About Section -->
-        <section id="about">
-            <h2>About</h2>
-            <div class="about-content">
-                <p>
-                    I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and machine learning applications in finance.
-                </p>
-                <p>
-                    My work explores how modern computational methods can enhance our understanding of financial markets, with particular emphasis on market microstructure and financial econometrics. I am passionate about developing rigorous empirical strategies that combine traditional econometric techniques with cutting-edge data science approaches.
-                </p>
+            <div class="intro-content">
+                <h1>Emanuele Luzzi</h1>
+                <div class="subtitle">PhD Candidate in Finance</div>
+                <div class="affiliation">Swiss Finance Institute @ USI Lugano</div>
+                <div class="interests">
+                    <strong>Research Interests:</strong> Financial Intermediation, Asset Pricing, Machine Learning
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:emanuele.luzzi@usi.ch">Email</a>
+                    <a href="https://www.linkedin.com/in/emanuele-luzzi-6bb39a124/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/emanueleLuzzi" target="_blank">GitHub</a>
+                </div>
+                <div class="bio">
+                    I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and machine learning applications in finance, with particular emphasis on market microstructure and financial econometrics.
+                </div>
             </div>
         </section>
         
@@ -369,21 +493,29 @@
                 <!-- Paper 1 -->
                 <div class="paper-item" onclick="togglePaper(this)">
                     <div class="paper-header">
-                        <div>
+                        <div class="paper-title-section">
                             <div class="paper-title">The Impact of Machine Learning on Market Microstructure: Evidence from High-Frequency Trading</div>
                             <div class="paper-coauthors">with John Doe and Jane Smith</div>
                         </div>
                         <span class="expand-icon">›</span>
                     </div>
                     <div class="paper-details">
-                        <div class="abstract-label">Abstract</div>
-                        <div class="abstract-text">
-                            This paper examines how machine learning algorithms have transformed market microstructure in modern financial markets. Using a comprehensive dataset of high-frequency trading activity, we document significant changes in price discovery, liquidity provision, and market efficiency following the widespread adoption of ML-based trading strategies. Our findings suggest that while ML enhances price efficiency in normal market conditions, it may amplify volatility during periods of market stress. We develop a theoretical framework that captures these dual effects and provides testable implications for regulatory policy.
-                        </div>
-                        <div class="paper-links">
-                            <a href="paper1.pdf" target="_blank">PDF</a>
-                            <a href="#" target="_blank">SSRN</a>
-                            <a href="#" target="_blank">Slides</a>
+                        <div class="paper-content">
+                            <div class="paper-text">
+                                <div class="abstract-label">Abstract</div>
+                                <div class="abstract-text">
+                                    This paper examines how machine learning algorithms have transformed market microstructure in modern financial markets. Using a comprehensive dataset of high-frequency trading activity, we document significant changes in price discovery, liquidity provision, and market efficiency following the widespread adoption of ML-based trading strategies. Our findings suggest that while ML enhances price efficiency in normal market conditions, it may amplify volatility during periods of market stress. We develop a theoretical framework that captures these dual effects and provides testable implications for regulatory policy.
+                                </div>
+                                <div class="paper-links">
+                                    <a href="paper1.pdf" target="_blank">PDF</a>
+                                    <a href="#" target="_blank">SSRN</a>
+                                    <a href="#" target="_blank">Slides</a>
+                                </div>
+                            </div>
+                            <div class="paper-figure">
+                                <img src="https://via.placeholder.com/250x180/f8f8f8/666?text=Figure+1" alt="Paper Figure">
+                                <div class="figure-caption">Figure 1: Main Results</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -391,20 +523,28 @@
                 <!-- Paper 2 -->
                 <div class="paper-item" onclick="togglePaper(this)">
                     <div class="paper-header">
-                        <div>
+                        <div class="paper-title-section">
                             <div class="paper-title">Intermediary Asset Pricing in the Age of Big Data</div>
                             <div class="paper-coauthors">Solo authored</div>
                         </div>
                         <span class="expand-icon">›</span>
                     </div>
                     <div class="paper-details">
-                        <div class="abstract-label">Abstract</div>
-                        <div class="abstract-text">
-                            I study how financial intermediaries' use of alternative data and machine learning affects asset prices and market dynamics. Building on the intermediary asset pricing framework, I show that data-driven strategies create new channels of risk transmission across markets. The model predicts that intermediaries with superior data processing capabilities earn higher risk-adjusted returns but also contribute to systemic fragility. Empirical tests using proprietary data from major financial institutions support these predictions, revealing a fundamental trade-off between individual firm performance and market stability.
-                        </div>
-                        <div class="paper-links">
-                            <a href="paper2.pdf" target="_blank">PDF</a>
-                            <a href="#" target="_blank">Appendix</a>
+                        <div class="paper-content">
+                            <div class="paper-text">
+                                <div class="abstract-label">Abstract</div>
+                                <div class="abstract-text">
+                                    I study how financial intermediaries' use of alternative data and machine learning affects asset prices and market dynamics. Building on the intermediary asset pricing framework, I show that data-driven strategies create new channels of risk transmission across markets. The model predicts that intermediaries with superior data processing capabilities earn higher risk-adjusted returns but also contribute to systemic fragility. Empirical tests using proprietary data from major financial institutions support these predictions, revealing a fundamental trade-off between individual firm performance and market stability.
+                                </div>
+                                <div class="paper-links">
+                                    <a href="paper2.pdf" target="_blank">PDF</a>
+                                    <a href="#" target="_blank">Appendix</a>
+                                </div>
+                            </div>
+                            <div class="paper-figure">
+                                <img src="https://via.placeholder.com/250x180/f8f8f8/666?text=Figure+2" alt="Paper Figure">
+                                <div class="figure-caption">Figure 2: Model Predictions</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -412,20 +552,82 @@
                 <!-- Paper 3 (Work in Progress) -->
                 <div class="paper-item" onclick="togglePaper(this)">
                     <div class="paper-header">
-                        <div>
+                        <div class="paper-title-section">
                             <div class="paper-title">Deep Learning and Cross-Sectional Asset Pricing: A New Frontier</div>
                             <div class="paper-coauthors">with Maria Garcia</div>
                         </div>
                         <span class="expand-icon">›</span>
                     </div>
                     <div class="paper-details">
-                        <div class="abstract-label">Abstract</div>
-                        <div class="abstract-text">
-                            We develop a novel deep learning framework for understanding cross-sectional variation in expected returns. Unlike traditional factor models, our approach allows for complex, non-linear interactions between firm characteristics and risk premia. The model uncovers previously hidden patterns in the data and generates out-of-sample Sharpe ratios that significantly exceed those of existing methods. We provide economic interpretation of the learned representations and show how they relate to fundamental sources of systematic risk. Preliminary results suggest that machine learning can bridge the gap between empirical asset pricing and economic theory.
+                        <div class="paper-content">
+                            <div class="paper-text">
+                                <div class="abstract-label">Abstract</div>
+                                <div class="abstract-text">
+                                    We develop a novel deep learning framework for understanding cross-sectional variation in expected returns. Unlike traditional factor models, our approach allows for complex, non-linear interactions between firm characteristics and risk premia. The model uncovers previously hidden patterns in the data and generates out-of-sample Sharpe ratios that significantly exceed those of existing methods. We provide economic interpretation of the learned representations and show how they relate to fundamental sources of systematic risk. Preliminary results suggest that machine learning can bridge the gap between empirical asset pricing and economic theory.
+                                </div>
+                                <div class="paper-links">
+                                    <a href="#" target="_blank">Coming Soon</a>
+                                </div>
+                            </div>
+                            <div class="paper-figure">
+                                <img src="https://via.placeholder.com/250x180/f8f8f8/666?text=Figure+3" alt="Paper Figure">
+                                <div class="figure-caption">Figure 3: Network Architecture</div>
+                            </div>
                         </div>
-                        <div class="paper-links">
-                            <a href="#" target="_blank">Coming Soon</a>
-                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Discussions Section -->
+        <section id="discussions">
+            <h2>Discussions</h2>
+            <div class="discussions-content">
+                <div class="discussion-item">
+                    <div class="discussion-title">The Future of Quantitative Finance in the AI Era</div>
+                    <div class="discussion-date">November 2024</div>
+                    <p>Thoughts on how artificial intelligence is reshaping quantitative finance and what it means for academic research and industry practice.</p>
+                </div>
+                
+                <div class="discussion-item">
+                    <div class="discussion-title">Market Microstructure and Retail Trading</div>
+                    <div class="discussion-date">October 2024</div>
+                    <p>Analysis of recent trends in retail trading and their implications for market quality and price discovery.</p>
+                </div>
+                
+                <div class="discussion-item">
+                    <div class="discussion-title">Python vs R for Financial Econometrics</div>
+                    <div class="discussion-date">September 2024</div>
+                    <p>A practical comparison of Python and R for financial econometrics, with emphasis on performance optimization and reproducibility.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Teaching Section -->
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <div class="teaching-content">
+                <div class="course-item">
+                    <div class="course-title">Financial Data Science</div>
+                    <div class="course-details">Teaching Assistant | Fall 2024 | Master's Level</div>
+                    <div class="course-description">
+                        Advanced course covering machine learning applications in finance, including portfolio optimization, risk management, and algorithmic trading. Focus on Python implementation and practical applications using real financial data.
+                    </div>
+                </div>
+                
+                <div class="course-item">
+                    <div class="course-title">Introduction to Financial Markets</div>
+                    <div class="course-details">Teaching Assistant | Spring 2024 | Bachelor's Level</div>
+                    <div class="course-description">
+                        Fundamental concepts in financial markets, covering equity markets, fixed income, derivatives, and market microstructure. Emphasis on connecting theoretical concepts with real-world applications.
+                    </div>
+                </div>
+                
+                <div class="course-item">
+                    <div class="course-title">Empirical Asset Pricing</div>
+                    <div class="course-details">Guest Lecturer | Fall 2023 | PhD Level</div>
+                    <div class="course-description">
+                        Guest lectures on machine learning methods in empirical asset pricing, covering topics such as regularization, cross-validation, and interpretable ML for factor discovery.
                     </div>
                 </div>
             </div>
