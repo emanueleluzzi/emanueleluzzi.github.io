@@ -1,1 +1,482 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emanuele Luzzi</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #2c3e50;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --border-color: #e0e0e0;
+            --link-color: #2980b9;
+            --max-width: 900px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background: white;
+            font-size: 16px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 20px 0;
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-name {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+        
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .nav-links a:hover {
+            color: var(--link-color);
+        }
+        
+        /* Main container */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 100px;
+            scroll-margin-top: 80px;
+        }
+        
+        /* Introduction Section */
+        .intro {
+            margin-bottom: 120px;
+        }
+        
+        .intro h1 {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+        
+        .intro .subtitle {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .intro .affiliation {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .intro .interests {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .contact-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+        
+        .contact-links a:hover {
+            background: var(--light-gray);
+            border-color: var(--border-color);
+        }
+        
+        /* About Section */
+        .about-content {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+        }
+        
+        /* Research Section */
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            letter-spacing: -0.3px;
+        }
+        
+        .papers-list {
+            margin-top: 40px;
+        }
+        
+        .paper-item {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: var(--light-gray);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .paper-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .paper-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .paper-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--primary-color);
+            line-height: 1.5;
+            flex: 1;
+        }
+        
+        .expand-icon {
+            font-size: 20px;
+            color: #999;
+            transition: transform 0.3s ease;
+            margin-top: 2px;
+            user-select: none;
+        }
+        
+        .paper-item.expanded .expand-icon {
+            transform: rotate(90deg);
+        }
+        
+        .paper-coauthors {
+            font-size: 15px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .paper-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        
+        .paper-item.expanded .paper-details {
+            max-height: 1000px;
+            margin-top: 20px;
+        }
+        
+        .abstract-label {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .abstract-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .paper-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .paper-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 14px;
+            padding: 6px 12px;
+            border: 1px solid var(--link-color);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .paper-links a:hover {
+            background: var(--link-color);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 20px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+            }
+            
+            .container {
+                padding: 100px 20px 60px;
+            }
+            
+            .intro h1 {
+                font-size: 32px;
+            }
+            
+            .intro .subtitle {
+                font-size: 18px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            .contact-links {
+                flex-wrap: wrap;
+            }
+            
+            .paper-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .expand-icon {
+                align-self: flex-start;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-name">Emanuele Luzzi</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="cv.pdf" target="_blank">CV</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Introduction Section -->
+        <section id="home" class="intro">
+            <h1>Emanuele Luzzi</h1>
+            <div class="subtitle">PhD Candidate in Finance</div>
+            <div class="affiliation">Swiss Finance Institute @ USI Lugano</div>
+            <div class="interests">
+                <strong>Research Interests:</strong> Financial Intermediation, Asset Pricing, Machine Learning
+            </div>
+            <div class="contact-links">
+                <a href="mailto:emanuele.luzzi@usi.ch">Email</a>
+                <a href="https://www.linkedin.com/in/emanuele-luzzi-6bb39a124/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/emanueleLuzzi" target="_blank">GitHub</a>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>
+                    I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and machine learning applications in finance.
+                </p>
+                <p>
+                    My work explores how modern computational methods can enhance our understanding of financial markets, with particular emphasis on market microstructure and financial econometrics. I am passionate about developing rigorous empirical strategies that combine traditional econometric techniques with cutting-edge data science approaches.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Research Section -->
+        <section id="research">
+            <h2>Research</h2>
+            
+            <div class="papers-list">
+                <!-- Paper 1 -->
+                <div class="paper-item" onclick="togglePaper(this)">
+                    <div class="paper-header">
+                        <div>
+                            <div class="paper-title">The Impact of Machine Learning on Market Microstructure: Evidence from High-Frequency Trading</div>
+                            <div class="paper-coauthors">with John Doe and Jane Smith</div>
+                        </div>
+                        <span class="expand-icon">›</span>
+                    </div>
+                    <div class="paper-details">
+                        <div class="abstract-label">Abstract</div>
+                        <div class="abstract-text">
+                            This paper examines how machine learning algorithms have transformed market microstructure in modern financial markets. Using a comprehensive dataset of high-frequency trading activity, we document significant changes in price discovery, liquidity provision, and market efficiency following the widespread adoption of ML-based trading strategies. Our findings suggest that while ML enhances price efficiency in normal market conditions, it may amplify volatility during periods of market stress. We develop a theoretical framework that captures these dual effects and provides testable implications for regulatory policy.
+                        </div>
+                        <div class="paper-links">
+                            <a href="paper1.pdf" target="_blank">PDF</a>
+                            <a href="#" target="_blank">SSRN</a>
+                            <a href="#" target="_blank">Slides</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paper 2 -->
+                <div class="paper-item" onclick="togglePaper(this)">
+                    <div class="paper-header">
+                        <div>
+                            <div class="paper-title">Intermediary Asset Pricing in the Age of Big Data</div>
+                            <div class="paper-coauthors">Solo authored</div>
+                        </div>
+                        <span class="expand-icon">›</span>
+                    </div>
+                    <div class="paper-details">
+                        <div class="abstract-label">Abstract</div>
+                        <div class="abstract-text">
+                            I study how financial intermediaries' use of alternative data and machine learning affects asset prices and market dynamics. Building on the intermediary asset pricing framework, I show that data-driven strategies create new channels of risk transmission across markets. The model predicts that intermediaries with superior data processing capabilities earn higher risk-adjusted returns but also contribute to systemic fragility. Empirical tests using proprietary data from major financial institutions support these predictions, revealing a fundamental trade-off between individual firm performance and market stability.
+                        </div>
+                        <div class="paper-links">
+                            <a href="paper2.pdf" target="_blank">PDF</a>
+                            <a href="#" target="_blank">Appendix</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paper 3 (Work in Progress) -->
+                <div class="paper-item" onclick="togglePaper(this)">
+                    <div class="paper-header">
+                        <div>
+                            <div class="paper-title">Deep Learning and Cross-Sectional Asset Pricing: A New Frontier</div>
+                            <div class="paper-coauthors">with Maria Garcia</div>
+                        </div>
+                        <span class="expand-icon">›</span>
+                    </div>
+                    <div class="paper-details">
+                        <div class="abstract-label">Abstract</div>
+                        <div class="abstract-text">
+                            We develop a novel deep learning framework for understanding cross-sectional variation in expected returns. Unlike traditional factor models, our approach allows for complex, non-linear interactions between firm characteristics and risk premia. The model uncovers previously hidden patterns in the data and generates out-of-sample Sharpe ratios that significantly exceed those of existing methods. We provide economic interpretation of the learned representations and show how they relate to fundamental sources of systematic risk. Preliminary results suggest that machine learning can bridge the gap between empirical asset pricing and economic theory.
+                        </div>
+                        <div class="paper-links">
+                            <a href="#" target="_blank">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        © 2024 Emanuele Luzzi. Last updated: November 2024.
+    </footer>
+    
+    <script>
+        // Toggle paper abstract expansion
+        function togglePaper(element) {
+            element.classList.toggle('expanded');
+        }
+        
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add active state to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.style.fontWeight = '400';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.fontWeight = '500';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
