@@ -444,8 +444,13 @@
             }
             
             .profile-image {
-                width: 150px;
-                height: 150px;
+                width: 100%;
+                max-width: 180px;
+                height: auto;
+                aspect-ratio: 1/2;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto;
             }
             
             .intro h1 {
