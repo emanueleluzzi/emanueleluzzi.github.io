@@ -10,7 +10,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
         
         :root {
             --primary-color: #2c3e50;
@@ -143,7 +142,7 @@
         .profile-image {
                 width: 160px;        /* Square dimensions for perfect circle */
                 height: 160px;       /* Must match width */
-                border-radius: 50%;  /* Makes it circular */
+                border-radius: 80%;  /* Makes it circular */
                 object-fit: cover;   /* Ensures image fills circle properly */
                 background: var(--light-gray);
                 border: 1px solid var(--border-color);
@@ -448,7 +447,7 @@
                     max-width: 160x;    /* Override the previous max-width */
                     height: 160px;       /* Square for circle */
                     aspect-ratio: 1/1;   /* Force square aspect ratio */
-                    border-radius: 50%;  /* Maintain circle on mobile */
+                    border-radius: 80%;  /* Maintain circle on mobile */
                     object-fit: cover;
                     display: block;
                     margin: 0 auto;
