@@ -141,13 +141,13 @@
         }
         
         .profile-image {
-            width: 180px;
-            height: 360px;
-            border-radius: 10px;
-            object-fit: cover;
-            background: var(--light-gray);
-            border: 1px solid var(--border-color);
-        }
+                width: 120px;        /* Square dimensions for perfect circle */
+                height: 120px;       /* Must match width */
+                border-radius: 50%;  /* Makes it circular */
+                object-fit: cover;   /* Ensures image fills circle properly */
+                background: var(--light-gray);
+                border: 1px solid var(--border-color);
+            }
         
         .intro-content {
             flex: 1;
@@ -444,13 +444,15 @@
             }
             
             .profile-image {
-                width: 100%;
-                max-width: 180px;
-                height: auto;
-                aspect-ratio: 1/2;
-                object-fit: cover;
-                display: block;
-                margin: 0 auto;
+                    width: 120px;        /* Keep it circular on mobile */
+                    max-width: 120px;    /* Override the previous max-width */
+                    height: 120px;       /* Square for circle */
+                    aspect-ratio: 1/1;   /* Force square aspect ratio */
+                    border-radius: 50%;  /* Maintain circle on mobile */
+                    object-fit: cover;
+                    display: block;
+                    margin: 0 auto;
+                }
             }
             
             .intro h1 {
