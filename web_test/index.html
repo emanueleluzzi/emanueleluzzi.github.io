@@ -1,509 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emanuele Luzzi</title>
+    <title>Emanuele Luzzi - PhD Candidate in Finance</title>
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        
-        :root {
-            --primary-color: #2c3e50;
-            --text-color: #333;
-            --light-gray: #f5f5f5;
-            --border-color: #e0e0e0;
-            --link-color: #2980b9;
-            --max-width: 900px;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background: white;
-            font-size: 16px;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: white;
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            padding: 20px 0;
-        }
-        
-        .nav-container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-name {
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--primary-color);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 35px;
-        }
-        
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 15px;
-            transition: color 0.3s ease;
-            font-weight: 400;
-        }
-        
-        .nav-links a:hover {
-            color: var(--link-color);
-        }
-        
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            width: 30px;
-            height: 25px;
-            justify-content: center;
-        }
-        .hamburger span {
-            display: block;
-            height: 4px;
-            background: var(--primary-color);
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            .nav-links {
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                gap: 0;
-                width: 180px;
-                box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-                border-radius: 0 0 8px 8px;
-                overflow: hidden;
-                display: none;
-            }
-            .nav-links.mobile-open {
-                display: flex;
-            }
-            .nav-links a {
-                padding: 18px 24px;
-                border-bottom: 1px solid var(--border-color);
-                font-size: 16px;
-            }
-        }
-
-        /* Main container */
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 120px 40px 80px;
-        }
-        
-        /* Sections */
-        section {
-            margin-bottom: 100px;
-            scroll-margin-top: 80px;
-        }
-        
-        /* Introduction Section with Profile Image */
-        .intro {
-            margin-bottom: 120px;
-            display: flex;
-            gap: 50px;
-            align-items: flex-start;
-        }
-        
-        .profile-image-container {
-            flex-shrink: 0;
-        }
-        
-        .profile-image {
-                width: 160px;        /* Square dimensions for perfect circle */
-                height: 160px;       /* Must match width */
-                border-radius: 80%;  /* Makes it circular */
-                object-fit: cover;   /* Ensures image fills circle properly */
-                background: var(--light-gray);
-                border: 1px solid var(--border-color);
-            }
-        
-        .intro-content {
-            flex: 1;
-        }
-        
-        .intro h1 {
-            font-size: 42px;
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: var(--primary-color);
-            letter-spacing: -0.5px;
-        }
-        
-        .intro .subtitle {
-            font-size: 20px;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-        
-        .intro .affiliation {
-            font-size: 17px;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .intro .interests {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        
-        .intro .bio {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555;
-            margin-top: 25px;
-        }
-        
-        .contact-links {
-            display: flex;
-            gap: 25px;
-            margin-top: 25px;
-        }
-        
-        .contact-links a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            padding: 8px 16px;
-            border: 1px solid transparent;
-            border-radius: 5px;
-        }
-        
-        .contact-links a:hover {
-            background: var(--light-gray);
-            border-color: var(--border-color);
-        }
-        
-        /* Section Headers */
-        h2 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-            letter-spacing: -0.3px;
-        }
-        
-        /* Research Section */
-        .papers-list {
-            margin-top: 40px;
-        }
-        
-        .paper-item {
-            margin-bottom: 35px;
-            padding: 25px;
-            background: var(--light-gray);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .paper-item:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        
-        .paper-header {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
-        }
-        
-        .paper-title-section {
-            flex: 1;
-        }
-        
-        .paper-title {
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--primary-color);
-            line-height: 1.5;
-        }
-        
-        .expand-icon {
-            font-size: 20px;
-            color: #999;
-            transition: transform 0.3s ease;
-            margin-top: 2px;
-            user-select: none;
-        }
-        
-        .paper-item.expanded .expand-icon {
-            transform: rotate(90deg);
-        }
-        
-        .paper-coauthors {
-            font-size: 15px;
-            color: #666;
-            margin-top: 8px;
-            font-style: italic;
-        }
-        
-        .paper-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-        }
-        
-        .paper-item.expanded .paper-details {
-            max-height: 2000px;
-            margin-top: 25px;
-        }
-        
-        .paper-content {
-            display: flex;
-            gap: 30px;
-            align-items: flex-start;
-        }
-        
-        .paper-text {
-            flex: 1;
-        }
-        
-        .paper-figure {
-            flex-shrink: 0;
-            width: 250px;
-        }
-        
-        .paper-figure img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            border: 1px solid var(--border-color);
-            background: white;
-        }
-        
-        .figure-caption {
-            font-size: 13px;
-            color: #666;
-            margin-top: 8px;
-            text-align: center;
-            font-style: italic;
-        }
-        
-        .abstract-label {
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .abstract-text {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        
-        .paper-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .paper-links a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-size: 14px;
-            padding: 6px 12px;
-            border: 1px solid var(--link-color);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        .paper-links a:hover {
-            background: var(--link-color);
-            color: white;
-        }
-        
-        /* Discussions Section */
-        .discussions-content {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555;
-        }
-        
-        .discussion-item {
-            margin-bottom: 25px;
-            padding: 20px;
-            background: var(--light-gray);
-            border-radius: 8px;
-        }
-        
-        .discussion-title {
-            font-size: 17px;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .discussion-date {
-            font-size: 14px;
-            color: #999;
-            margin-bottom: 10px;
-        }
-        
-        /* Teaching Section */
-        .teaching-content {
-            font-size: 16px;
-            line-height: 1.8;
-        }
-        
-        .course-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: var(--light-gray);
-            border-radius: 8px;
-        }
-        
-        .course-title {
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 8px;
-        }
-        
-        .course-details {
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        
-        .course-description {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.7;
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #999;
-            font-size: 14px;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 20px;
-            }
-            
-            .nav-links {
-                gap: 20px;
-            }
-            
-            .nav-links a {
-                font-size: 14px;
-            }
-            
-            .container {
-                padding: 100px 20px 60px;
-            }
-            
-            .intro {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
-            .profile-image {
-                    width: 160px;        /* Keep it circular on mobile */
-                    max-width: 160x;    /* Override the previous max-width */
-                    height: 160px;       /* Square for circle */
-                    aspect-ratio: 1/1;   /* Force square aspect ratio */
-                    border-radius: 80%;  /* Maintain circle on mobile */
-                    object-fit: cover;
-                    display: block;
-                    margin: 0 auto;
-                }
-            }
-            
-            .intro h1 {
-                font-size: 32px;
-            }
-            
-            .intro .subtitle {
-                font-size: 18px;
-            }
-            
-            h2 {
-                font-size: 24px;
-            }
-            
-            .contact-links {
-                flex-wrap: wrap;
-            }
-            
-            .paper-content {
-                flex-direction: column;
-            }
-            
-            .paper-figure {
-                width: 100%;
-            }
-            
-            .paper-header {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .expand-icon {
-                align-self: flex-start;
-            }
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Optional: Add favicon -->
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    
+    <!-- Optional: SEO and Open Graph tags for better sharing -->
+    <meta name="description" content="Emanuele Luzzi - PhD Candidate in Finance at Swiss Finance Institute @ USI Lugano">
+    <meta name="keywords" content="Finance, PhD, Machine Learning, Asset Pricing, Financial Intermediation">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <!-- Fixed navigation that stays at top when scrolling -->
     <nav>
         <div class="nav-container">
+            <!-- Your name/brand on the left -->
             <div class="nav-name">Emanuele Luzzi</div>
+            
+            <!-- Mobile menu hamburger icon (hidden on desktop) -->
             <div class="hamburger" onclick="toggleMobileNav()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+            
+            <!-- Navigation links -->
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#research">Research</a>
@@ -514,58 +42,75 @@
         </div>
     </nav>
     
-    <!-- Main Content -->
+    <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
     <div class="container">
-        <!-- Introduction Section -->
+        
+        <!-- ==================== HOME/INTRO SECTION ==================== -->
         <section id="home" class="intro">
+            <!-- Profile picture container -->
             <div class="profile-image-container">
                 <img src="images/pp3.png" alt="Emanuele Luzzi" class="profile-image">
             </div>
+            
+            <!-- Main introduction content -->
             <div class="intro-content">
                 <h1>Emanuele Luzzi</h1>
                 <div class="subtitle">PhD Candidate in Finance</div>
                 <div class="affiliation">Swiss Finance Institute @ USI Lugano</div>
+                
+                <!-- Research interests -->
                 <div class="interests">
                     <strong>Research Interests:</strong> Financial Intermediation, Asset Pricing, Machine Learning
                 </div>
+                
+                <!-- Contact links -->
                 <div class="contact-links">
                     <a href="mailto:emanuele.luzzi@usi.ch">Email</a>
                     <a href="https://www.linkedin.com/in/emanuele-luzzi-6bb39a124/" target="_blank">LinkedIn</a>
                     <a href="https://github.com/emanueleLuzzi" target="_blank">GitHub</a>
                 </div>
+                
+                <!-- Short bio paragraph -->
                 <div class="bio">
                     I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and machine learning applications in finance, with particular emphasis on market microstructure and financial econometrics.
                 </div>
             </div>
         </section>
         
-        <!-- Research Section -->
+        <!-- ==================== RESEARCH SECTION ==================== -->
         <section id="research">
             <h2>Research</h2>
             
             <div class="papers-list">
-                <!-- Paper 1 -->
+                <!-- ========== Paper 1 ========== -->
                 <div class="paper-item" onclick="togglePaper(this)">
+                    <!-- Paper header (always visible) -->
                     <div class="paper-header">
                         <div class="paper-title-section">
                             <div class="paper-title">The Impact of Machine Learning on Market Microstructure: Evidence from High-Frequency Trading</div>
                             <div class="paper-coauthors">with John Doe and Jane Smith</div>
                         </div>
+                        <!-- Expand/collapse icon -->
                         <span class="expand-icon">›</span>
                     </div>
+                    
+                    <!-- Paper details (hidden by default, shown on click) -->
                     <div class="paper-details">
                         <div class="paper-content">
+                            <!-- Abstract and links -->
                             <div class="paper-text">
                                 <div class="abstract-label">Abstract</div>
                                 <div class="abstract-text">
                                     This paper examines how machine learning algorithms have transformed market microstructure in modern financial markets. Using a comprehensive dataset of high-frequency trading activity, we document significant changes in price discovery, liquidity provision, and market efficiency following the widespread adoption of ML-based trading strategies. Our findings suggest that while ML enhances price efficiency in normal market conditions, it may amplify volatility during periods of market stress. We develop a theoretical framework that captures these dual effects and provides testable implications for regulatory policy.
                                 </div>
+                                <!-- Links to paper resources -->
                                 <div class="paper-links">
                                     <a href="paper1.pdf" target="_blank">PDF</a>
                                     <a href="#" target="_blank">SSRN</a>
                                     <a href="#" target="_blank">Slides</a>
                                 </div>
                             </div>
+                            <!-- Optional figure -->
                             <div class="paper-figure">
                                 <img src="https://via.placeholder.com/250x180/f8f8f8/666?text=Figure+1" alt="Paper Figure">
                                 <div class="figure-caption">Figure 1: Main Results</div>
@@ -574,7 +119,7 @@
                     </div>
                 </div>
                 
-                <!-- Paper 2 -->
+                <!-- ========== Paper 2 ========== -->
                 <div class="paper-item" onclick="togglePaper(this)">
                     <div class="paper-header">
                         <div class="paper-title-section">
@@ -603,7 +148,7 @@
                     </div>
                 </div>
                 
-                <!-- Paper 3 (Work in Progress) -->
+                <!-- ========== Paper 3 (Work in Progress) ========== -->
                 <div class="paper-item" onclick="togglePaper(this)">
                     <div class="paper-header">
                         <div class="paper-title-section">
@@ -633,22 +178,25 @@
             </div>
         </section>
         
-        <!-- Discussions Section -->
+        <!-- ==================== DISCUSSIONS SECTION ==================== -->
         <section id="discussions">
             <h2>Discussions</h2>
             <div class="discussions-content">
+                <!-- Discussion Item 1 -->
                 <div class="discussion-item">
                     <div class="discussion-title">The Future of Quantitative Finance in the AI Era</div>
                     <div class="discussion-date">November 2024</div>
                     <p>Thoughts on how artificial intelligence is reshaping quantitative finance and what it means for academic research and industry practice.</p>
                 </div>
                 
+                <!-- Discussion Item 2 -->
                 <div class="discussion-item">
                     <div class="discussion-title">Market Microstructure and Retail Trading</div>
                     <div class="discussion-date">October 2024</div>
                     <p>Analysis of recent trends in retail trading and their implications for market quality and price discovery.</p>
                 </div>
                 
+                <!-- Discussion Item 3 -->
                 <div class="discussion-item">
                     <div class="discussion-title">Python vs R for Financial Econometrics</div>
                     <div class="discussion-date">September 2024</div>
@@ -657,10 +205,11 @@
             </div>
         </section>
         
-        <!-- Teaching Section -->
+        <!-- ==================== TEACHING SECTION ==================== -->
         <section id="teaching">
             <h2>Teaching</h2>
             <div class="teaching-content">
+                <!-- Course 1 -->
                 <div class="course-item">
                     <div class="course-title">Financial Data Science</div>
                     <div class="course-details">Teaching Assistant | Fall 2024 | Master's Level</div>
@@ -669,6 +218,7 @@
                     </div>
                 </div>
                 
+                <!-- Course 2 -->
                 <div class="course-item">
                     <div class="course-title">Introduction to Financial Markets</div>
                     <div class="course-details">Teaching Assistant | Spring 2024 | Bachelor's Level</div>
@@ -677,6 +227,7 @@
                     </div>
                 </div>
                 
+                <!-- Course 3 -->
                 <div class="course-item">
                     <div class="course-title">Empirical Asset Pricing</div>
                     <div class="course-details">Guest Lecturer | Fall 2023 | PhD Level</div>
@@ -688,60 +239,12 @@
         </section>
     </div>
     
-    <!-- Footer -->
+    <!-- ==================== FOOTER ==================== -->
     <footer>
         © 2025 Emanuele Luzzi. Last updated: September 2024.
     </footer>
     
-    <script>
-        // Toggle paper abstract expansion
-        function togglePaper(element) {
-            element.classList.toggle('expanded');
-        }
-
-          function toggleMobileNav() {
-          document.querySelector('.nav-links').classList.toggle('mobile-open');
-        }
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('mobile-open');
-        });
-        });
-        
-        // Smooth scroll behavior for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Add active state to navigation based on scroll position
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.style.fontWeight = '400';
-                if (link.getAttribute('href') === '#' + current) {
-                    link.style.fontWeight = '500';
-                }
-            });
-        });
-    </script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
