@@ -34,7 +34,7 @@ const CONFIG = {
             coauthors: "with Paul Schneider and Rohan Sen",
             abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios. Our nonparametric approach leverages the classical duality between the minimum-variance SDF and the maximum Sharpe ratio portfolio, and comes with finite-sample performance guarantees, as well as a formal testing framework for the monotonicity and convexity of the SDF. We perform an empirical study in the S\&P 500 market and find heterogeneous shapes across different states of the world as measured by the price of volatility and the maturities of options. While SDF implied by monthly options are monotonically decreasing, their convexity/concavity is less pronounced.  Ultra-short ODTE options, on the contrary, exhibit a pronounced U-shape in higher-volatility states. Our empirical results are robust across various models of the information set.",
             pdf: "",
-            ssrn: "",
+            ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5634612",
             slides: "",
             figure: "images/LSDFvNPO paper_pic.png",
             figureCaption: ""
