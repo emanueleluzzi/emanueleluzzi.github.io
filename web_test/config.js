@@ -53,44 +53,44 @@ const CONFIG = {
     // Discussions/Blog posts
     discussions: [
         {
-            title: "The Future of Quantitative Finance in the AI Era",
-            date: "November 2024",
-            description: "Thoughts on how artificial intelligence is reshaping quantitative finance and what it means for academic research and industry practice."
+            title: "Heterogeneous Beliefs Recovery",
+            date: "SFI PhD Workshop 2024",
+            // description: "Thoughts on how artificial intelligence is reshaping quantitative finance and what it means for academic research and industry practice."
         },
         {
-            title: "Market Microstructure and Retail Trading",
-            date: "October 2024",
-            description: "Analysis of recent trends in retail trading and their implications for market quality and price discovery."
+            title: "Corporate Earnings Calls and Analyst Beliefs",
+            date: "SFI PhD Workshop 2025",
+            // description: "Analysis of recent trends in retail trading and their implications for market quality and price discovery."
         },
-        {
-            title: "Python vs R for Financial Econometrics",
-            date: "September 2024",
-            description: "A practical comparison of Python and R for financial econometrics, with emphasis on performance optimization and reproducibility."
-        }
+        // {
+        //     title: "Python vs R for Financial Econometrics",
+        //     date: "September 2024",
+        //     description: "A practical comparison of Python and R for financial econometrics, with emphasis on performance optimization and reproducibility."
+        // }
     ],
     
     // Teaching experience
     teaching: [
         {
-            title: "Financial Data Science",
-            role: "Teaching Assistant",
+            title: "Computer Science for Economists II",
+            employer: "USI Lugano",
             semester: "Fall 2024",
-            level: "Master's Level",
-            description: "Advanced course covering machine learning applications in finance, including portfolio optimization, risk management, and algorithmic trading. Focus on Python implementation and practical applications using real financial data."
+            // level: "Master's Level",
+            // description: "Advanced course covering machine learning applications in finance, including portfolio optimization, risk management, and algorithmic trading. Focus on Python implementation and practical applications using real financial data."
         },
         {
-            title: "Introduction to Financial Markets",
-            role: "Teaching Assistant",
-            semester: "Spring 2024",
-            level: "Bachelor's Level",
-            description: "Fundamental concepts in financial markets, covering equity markets, fixed income, derivatives, and market microstructure. Emphasis on connecting theoretical concepts with real-world applications."
-        },
-        {
-            title: "Empirical Asset Pricing",
-            role: "Guest Lecturer",
+            title: "Mathematics: Real Analysis",
+            employer: "USI Lugano",
             semester: "Fall 2023",
-            level: "PhD Level",
-            description: "Guest lectures on machine learning methods in empirical asset pricing, covering topics such as regularization, cross-validation, and interpretable ML for factor discovery."
+            // level: "Bachelor's Level",
+            // description: "Fundamental concepts in financial markets, covering equity markets, fixed income, derivatives, and market microstructure. Emphasis on connecting theoretical concepts with real-world applications."
+        },
+        {
+            title: "Advanced Game Theory",
+            employer: "Ulm University",
+            semester: "Spring 2019",
+            // level: "PhD Level",
+            // description: "Guest lectures on machine learning methods in empirical asset pricing, covering topics such as regularization, cross-validation, and interpretable ML for factor discovery."
         }
     ],
     
