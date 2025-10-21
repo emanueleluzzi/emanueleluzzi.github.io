@@ -33,9 +33,9 @@ const CONFIG = {
             title: "Learning the Stochastic Discount Factor via Nonparametric Option Portfolios",
             coauthors: "with Paul Schneider and Rohan Sen",
             abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios. Our nonparametric approach leverages the classical duality between the minimum-variance SDF and the maximum Sharpe ratio portfolio, and comes with finite-sample performance guarantees, as well as a formal testing framework for the monotonicity and convexity of the SDF. We perform an empirical study in the S\&P 500 market and find heterogeneous shapes across different states of the world as measured by the price of volatility and the maturities of options. While SDF implied by monthly options are monotonically decreasing, their convexity/concavity is less pronounced.  Ultra-short ODTE options, on the contrary, exhibit a pronounced U-shape in higher-volatility states. Our empirical results are robust across various models of the information set.",
-            // pdf: "LSDF.pdf",
-            // ssrn: "#",
-            // slides: "#",
+            pdf: "",
+            ssrn: "",
+            slides: "",
             figure: "images/LSDFvNPO paper_pic.png",
             figureCaption: ""
         },
@@ -55,12 +55,12 @@ const CONFIG = {
         {
             title: "Heterogeneous Beliefs Recovery",
             date: "SFI PhD Workshop 2024",
-            // description: "Thoughts on how artificial intelligence is reshaping quantitative finance and what it means for academic research and industry practice."
+            description: ""
         },
         {
             title: "Corporate Earnings Calls and Analyst Beliefs",
             date: "SFI PhD Workshop 2025",
-            // description: "Analysis of recent trends in retail trading and their implications for market quality and price discovery."
+            description: ""
         },
         // {
         //     title: "Python vs R for Financial Econometrics",
@@ -76,24 +76,24 @@ const CONFIG = {
             role: "Teaching Assistant",
             employer: "USI Lugano",
             semester: "Fall 2024",
-            // level: "Master's Level",
-            // description: "Advanced course covering machine learning applications in finance, including portfolio optimization, risk management, and algorithmic trading. Focus on Python implementation and practical applications using real financial data."
+            level: "",
+            description: ""
         },
         {
             title: "Mathematics: Real Analysis",
             role: "Teaching Assistant",
             employer: "USI Lugano",
             semester: "Fall 2023",
-            // level: "Bachelor's Level",
-            // description: "Fundamental concepts in financial markets, covering equity markets, fixed income, derivatives, and market microstructure. Emphasis on connecting theoretical concepts with real-world applications."
+            level: "",
+            description: ""
         },
         {
             title: "Advanced Game Theory",
             role: "Teaching Assistant",
             employer: "Ulm University",
             semester: "Spring 2019",
-            // level: "PhD Level",
-            // description: "Guest lectures on machine learning methods in empirical asset pricing, covering topics such as regularization, cross-validation, and interpretable ML for factor discovery."
+            level: "",
+            description: ""
         }
     ],
     
