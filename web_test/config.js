@@ -14,10 +14,10 @@ const CONFIG = {
     profileImage: "images/round_image.png",
     
     // Research interests (will be displayed as comma-separated)
-    // interests: "Financial Intermediation, Asset Pricing and applications of Machine Learning in Finance",
+    interests: "Financial Intermediation, Asset Pricing and applications of Machine Learning in Finance",
     
     // Bio paragraph
-    bio: "I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and applications of machine learningin finance.",
+    bio: "I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and applications of machine learning in finance.",
     
     // Contact links
     links: {
@@ -73,6 +73,7 @@ const CONFIG = {
     teaching: [
         {
             title: "Computer Science for Economists II",
+            role: "Teaching Assistant",
             employer: "USI Lugano",
             semester: "Fall 2024",
             // level: "Master's Level",
@@ -80,6 +81,7 @@ const CONFIG = {
         },
         {
             title: "Mathematics: Real Analysis",
+            role: "Teaching Assistant",
             employer: "USI Lugano",
             semester: "Fall 2023",
             // level: "Bachelor's Level",
@@ -87,6 +89,7 @@ const CONFIG = {
         },
         {
             title: "Advanced Game Theory",
+            role: "Teaching Assistant",
             employer: "Ulm University",
             semester: "Spring 2019",
             // level: "PhD Level",
@@ -97,6 +100,6 @@ const CONFIG = {
     // Footer
     footer: {
         copyright: "© 2025 Emanuele Luzzi",
-        lastUpdated: "September 2024"
+        lastUpdated: "October 2025"
     }
 };

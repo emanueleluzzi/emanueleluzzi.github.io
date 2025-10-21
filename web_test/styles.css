@@ -10,35 +10,33 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  /* Include padding/border in width calculations */
+    box-sizing: border-box;
 }
 
 /* ===================================
-   2. CSS VARIABLES (CUSTOM PROPERTIES)
-   Easy to update colors and dimensions from one place
+   2. CSS VARIABLES
    =================================== */
 :root {
     /* Color Palette */
-    --primary-color: #2c3e50;      /* Dark blue-gray for headers */
-    --text-color: #333;             /* Main text color */
-    --light-gray: #f5f5f5;          /* Background for cards/sections */
-    --border-color: #e0e0e0;        /* Subtle borders */
-    --link-color: #2980b9;          /* Blue for links */
+    --primary-color: #2c3e50;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --border-color: #e0e0e0;
+    --link-color: #2980b9;
     
     /* Layout */
-    --max-width: 900px;             /* Maximum content width */
-    --nav-height: 60px;             /* Navigation bar height */
+    --max-width: 900px;
+    --nav-height: 60px;
     
     /* Spacing */
-    --section-spacing: 100px;       /* Space between major sections */
-    --content-padding: 40px;        /* Default padding for content */
+    --section-spacing: 100px;
+    --content-padding: 40px;
 }
 
 /* ===================================
    3. GLOBAL STYLES
    =================================== */
 body {
-    /* System font stack for better performance and native feel */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
     color: var(--text-color);
@@ -46,7 +44,6 @@ body {
     font-size: 16px;
 }
 
-/* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
 }
@@ -55,12 +52,12 @@ html {
    4. NAVIGATION STYLES
    =================================== */
 nav {
-    position: fixed;                /* Stick to top of viewport */
+    position: fixed;
     top: 0;
     width: 100%;
     background: white;
     border-bottom: 1px solid var(--border-color);
-    z-index: 1000;                  /* Ensure nav stays on top */
+    z-index: 1000;
     padding: 20px 0;
 }
 
@@ -96,7 +93,6 @@ nav {
     color: var(--link-color);
 }
 
-/* Hamburger menu for mobile (hidden by default) */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -121,7 +117,7 @@ nav {
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 120px var(--content-padding) 80px;  /* Top padding accounts for fixed nav */
+    padding: 120px var(--content-padding) 80px;
 }
 
 /* ===================================
@@ -129,10 +125,9 @@ nav {
    =================================== */
 section {
     margin-bottom: var(--section-spacing);
-    scroll-margin-top: 80px;        /* Offset for fixed navigation when jumping to section */
+    scroll-margin-top: 80px;
 }
 
-/* Section Headers */
 h2 {
     font-size: 28px;
     font-weight: 600;
@@ -142,7 +137,7 @@ h2 {
 }
 
 /* ===================================
-   7. INTRODUCTION/HOME SECTION
+   7. INTRODUCTION/HOME SECTION - UPDATED
    =================================== */
 .intro {
     margin-bottom: 120px;
@@ -152,14 +147,14 @@ h2 {
 }
 
 .profile-image-container {
-    flex-shrink: 0;                /* Prevent image from shrinking */
+    flex-shrink: 0;
 }
 
 .profile-image {
     width: 160px;
-    height: 160px;                 /* Square for perfect circle */
-    border-radius: 50%;             /* Makes it circular */
-    object-fit: cover;              /* Ensures image fills circle properly */
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
     background: var(--light-gray);
     border: 1px solid var(--border-color);
 }
@@ -171,7 +166,7 @@ h2 {
 .intro h1 {
     font-size: 42px;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: var(--primary-color);
     letter-spacing: -0.5px;
 }
@@ -179,14 +174,14 @@ h2 {
 .intro .subtitle {
     font-size: 20px;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-weight: 400;
 }
 
 .intro .affiliation {
     font-size: 17px;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .intro .interests {
@@ -195,14 +190,16 @@ h2 {
     margin-bottom: 30px;
 }
 
+/* Bio - More prominent, direct style */
 .intro .bio {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    margin-top: 25px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    max-width: 700px;
 }
 
-/* Contact Links */
 .contact-links {
     display: flex;
     gap: 25px;
@@ -225,13 +222,12 @@ h2 {
 }
 
 /* ===================================
-   8. RESEARCH SECTION
+   8. RESEARCH SECTION - UPDATED FOR HORIZONTAL LAYOUT
    =================================== */
 .papers-list {
     margin-top: 40px;
 }
 
-/* Individual Paper Container */
 .paper-item {
     margin-bottom: 35px;
     padding: 25px;
@@ -245,7 +241,6 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Paper Header (Always Visible) */
 .paper-header {
     display: flex;
     justify-content: space-between;
@@ -271,20 +266,18 @@ h2 {
     font-style: italic;
 }
 
-/* Expand/Collapse Icon */
 .expand-icon {
     font-size: 20px;
     color: #999;
     transition: transform 0.3s ease;
     margin-top: 2px;
-    user-select: none;              /* Prevent text selection */
+    user-select: none;
 }
 
 .paper-item.expanded .expand-icon {
-    transform: rotate(90deg);       /* Rotate when expanded */
+    transform: rotate(90deg);
 }
 
-/* Paper Details (Hidden by Default) */
 .paper-details {
     max-height: 0;
     overflow: hidden;
@@ -292,30 +285,32 @@ h2 {
 }
 
 .paper-item.expanded .paper-details {
-    max-height: 2000px;            /* Large value to accommodate content */
+    max-height: 2000px;
     margin-top: 25px;
 }
 
-/* Paper Content Layout */
+/* Paper Content - Now horizontal with larger figure */
 .paper-content {
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .paper-text {
-    flex: 1;
+    width: 100%;
 }
 
-/* Paper Figure */
+/* Paper Figure - Horizontal 16:9 layout */
 .paper-figure {
-    flex-shrink: 0;
-    width: 250px;
+    width: 100%;
+    margin-top: 15px;
 }
 
 .paper-figure img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     border-radius: 5px;
     border: 1px solid var(--border-color);
     background: white;
@@ -325,11 +320,9 @@ h2 {
     font-size: 13px;
     color: #666;
     margin-top: 8px;
-    text-align: center;
     font-style: italic;
 }
 
-/* Abstract Styling */
 .abstract-label {
     font-weight: 500;
     color: var(--primary-color);
@@ -347,7 +340,6 @@ h2 {
     text-align: justify;
 }
 
-/* Paper Links */
 .paper-links {
     display: flex;
     gap: 15px;
@@ -447,17 +439,14 @@ footer {
    12. RESPONSIVE DESIGN (MOBILE)
    =================================== */
 @media (max-width: 768px) {
-    /* Adjust Navigation */
     .nav-container {
         padding: 0 20px;
     }
     
-    /* Show hamburger menu */
     .hamburger {
         display: flex;
     }
     
-    /* Mobile navigation menu */
     .nav-links {
         position: absolute;
         top: 60px;
@@ -469,10 +458,9 @@ footer {
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         border-radius: 0 0 8px 8px;
         overflow: hidden;
-        display: none;              /* Hidden by default */
+        display: none;
     }
     
-    /* Show menu when toggled */
     .nav-links.mobile-open {
         display: flex;
     }
@@ -483,24 +471,20 @@ footer {
         font-size: 16px;
     }
     
-    /* Adjust container padding */
     .container {
         padding: 100px 20px 60px;
     }
     
-    /* Stack intro section vertically */
     .intro {
         flex-direction: column;
         gap: 30px;
     }
     
-    /* Center profile image on mobile */
     .profile-image {
         display: block;
         margin: 0 auto;
     }
     
-    /* Adjust typography sizes */
     .intro h1 {
         font-size: 32px;
     }
@@ -509,16 +493,18 @@ footer {
         font-size: 18px;
     }
     
+    .intro .bio {
+        font-size: 16px;
+    }
+    
     h2 {
         font-size: 24px;
     }
     
-    /* Wrap contact links */
     .contact-links {
         flex-wrap: wrap;
     }
     
-    /* Stack paper content vertically */
     .paper-content {
         flex-direction: column;
     }
@@ -527,7 +513,6 @@ footer {
         width: 100%;
     }
     
-    /* Adjust paper header */
     .paper-header {
         flex-direction: column;
         gap: 10px;
