@@ -14,10 +14,10 @@ const CONFIG = {
     profileImage: "images/round_image.png",
     
     // Research interests (will be displayed as comma-separated)
-    interests: "Financial Intermediation, Asset Pricing, Machine Learning",
+    // interests: "Financial Intermediation, Asset Pricing and applications of Machine Learning in Finance",
     
     // Bio paragraph
-    bio: "AOOO I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and machine learning applications in finance, with particular emphasis on market microstructure and financial econometrics.",
+    bio: "I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and applications of machine learningin finance.",
     
     // Contact links
     links: {
@@ -30,32 +30,24 @@ const CONFIG = {
     // Research papers
     papers: [
         {
-            title: "The Impact of Machine Learning on Market Microstructure: Evidence from High-Frequency Trading",
+            title: "Learning the Stochastic Discount Factor via Nonparametric Option Portfolios",
             coauthors: "with John Doe and Jane Smith",
-            abstract: "This paper examines how machine learning algorithms have transformed market microstructure in modern financial markets. Using a comprehensive dataset of high-frequency trading activity, we document significant changes in price discovery, liquidity provision, and market efficiency following the widespread adoption of ML-based trading strategies. Our findings suggest that while ML enhances price efficiency in normal market conditions, it may amplify volatility during periods of market stress. We develop a theoretical framework that captures these dual effects and provides testable implications for regulatory policy.",
-            pdf: "paper1.pdf",
+            abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios. Our nonparametric approach leverages the classical duality between the minimum-variance SDF and the maximum Sharpe ratio portfolio, and comes with finite-sample performance guarantees, as well as a formal testing framework for the monotonicity and convexity of the SDF. We perform an empirical study in the S\&P 500 market and find heterogeneous shapes across different states of the world as measured by the price of volatility and the maturities of options. While SDF implied by monthly options are monotonically decreasing, their convexity/concavity is less pronounced.  Ultra-short ODTE options, on the contrary, exhibit a pronounced U-shape in higher-volatility states. Our empirical results are robust across various models of the information set.",
+            // pdf: "LSDF.pdf",
             ssrn: "#",
             slides: "#",
             figure: "https://via.placeholder.com/250x180/f8f8f8/666?text=Figure+1",
             figureCaption: "Figure 1: Main Results"
         },
-        {
-            title: "Intermediary Asset Pricing in the Age of Big Data",
-            coauthors: "Solo authored",
-            abstract: "I study how financial intermediaries' use of alternative data and machine learning affects asset prices and market dynamics. Building on the intermediary asset pricing framework, I show that data-driven strategies create new channels of risk transmission across markets. The model predicts that intermediaries with superior data processing capabilities earn higher risk-adjusted returns but also contribute to systemic fragility. Empirical tests using proprietary data from major financial institutions support these predictions, revealing a fundamental trade-off between individual firm performance and market stability.",
-            pdf: "paper2.pdf",
-            appendix: "#",
-            figure: "https://via.placeholder.com/250x180/f8f8f8/666?text=Figure+2",
-            figureCaption: "Figure 2: Model Predictions"
-        },
-        {
-            title: "Deep Learning and Cross-Sectional Asset Pricing: A New Frontier",
-            coauthors: "with Maria Garcia",
-            abstract: "We develop a novel deep learning framework for understanding cross-sectional variation in expected returns. Unlike traditional factor models, our approach allows for complex, non-linear interactions between firm characteristics and risk premia. The model uncovers previously hidden patterns in the data and generates out-of-sample Sharpe ratios that significantly exceed those of existing methods. We provide economic interpretation of the learned representations and show how they relate to fundamental sources of systematic risk. Preliminary results suggest that machine learning can bridge the gap between empirical asset pricing and economic theory.",
-            comingSoon: true,
-            figure: "https://via.placeholder.com/250x180/f8f8f8/666?text=Figure+3",
-            figureCaption: "Figure 3: Network Architecture"
-        }
+        // {
+        //     title: "Intermediary Asset Pricing in the Age of Big Data",
+        //     coauthors: "Solo authored",
+        //     abstract: "I study how financial intermediaries' use of alternative data and machine learning affects asset prices and market dynamics. Building on the intermediary asset pricing framework, I show that data-driven strategies create new channels of risk transmission across markets. The model predicts that intermediaries with superior data processing capabilities earn higher risk-adjusted returns but also contribute to systemic fragility. Empirical tests using proprietary data from major financial institutions support these predictions, revealing a fundamental trade-off between individual firm performance and market stability.",
+        //     pdf: "paper2.pdf",
+        //     appendix: "#",
+        //     figure: "https://via.placeholder.com/250x180/f8f8f8/666?text=Figure+2",
+        //     figureCaption: "Figure 2: Model Predictions"
+        // },
     ],
     
     // Discussions/Blog posts
