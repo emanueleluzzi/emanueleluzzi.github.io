@@ -131,7 +131,7 @@ section {
 h2 {
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: var(--primary-color);
     letter-spacing: -0.3px;
 }
@@ -222,10 +222,30 @@ h2 {
 }
 
 /* ===================================
-   8. RESEARCH SECTION - UPDATED FOR HORIZONTAL LAYOUT
+   8. RESEARCH SECTION WITH SUBSECTIONS
    =================================== */
-.papers-list {
-    margin-top: 40px;
+
+/* Research subsection styling */
+.research-subsection {
+    margin-bottom: 60px;
+}
+
+.research-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.subsection-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Papers list styling */
+.papers-list, .wip-list, .publications-list {
+    margin-top: 0;
 }
 
 .paper-item {
@@ -289,7 +309,7 @@ h2 {
     margin-top: 25px;
 }
 
-/* Paper Content - Now horizontal with larger figure */
+/* Paper Content - Horizontal layout with larger figure */
 .paper-content {
     display: flex;
     flex-direction: column;
@@ -300,7 +320,7 @@ h2 {
     width: 100%;
 }
 
-/* Paper Figure - Horizontal 16:9 layout */
+/* Paper Figure - Horizontal layout with better fitting */
 .paper-figure {
     width: 100%;
     margin-top: 15px;

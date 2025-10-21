@@ -49,6 +49,18 @@ const CONFIG = {
         //     figureCaption: "Figure 2: Model Predictions"
         // },
     ],
+
+     // Work in Progress
+    workInProgress: [
+        {
+            title: "Optimal Variance Swaps",
+            coauthors: "with Paul Schneider, Rohan Sen, and Marc Van Uffelen",
+            abstract: "",
+            comingSoon: true,
+            // figure: "images/placeholder.png",
+            // figureCaption: "Figure: Preliminary Results"
+        },
+    ],
     
     // Discussions/Blog posts
     discussions: [
