@@ -309,11 +309,11 @@ h2 {
 .paper-figure img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 5px;
     border: 1px solid var(--border-color);
     background: white;
+    padding: 10px;
 }
 
 .figure-caption {
