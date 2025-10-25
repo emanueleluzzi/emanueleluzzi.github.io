@@ -82,7 +82,6 @@ const CONFIG = {
         //     date: "September 2024",
         //     description: "A practical comparison of Python and R for financial econometrics, with emphasis on performance optimization and reproducibility."
         // }
-    ],
     
     // Teaching experience
     teaching: [
