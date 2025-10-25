@@ -385,10 +385,28 @@ h2 {
 /* ===================================
    9. DISCUSSIONS SECTION
    =================================== */
+
 .discussions-content {
     font-size: 16px;
     line-height: 1.8;
     color: #555;
+}
+
+.discussion-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slides-icon {
+    font-size: 16px;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.slides-icon:hover {
+    opacity: 1;
 }
 
 .discussion-item {
@@ -414,6 +432,7 @@ h2 {
 /* ===================================
    10. TEACHING SECTION
    =================================== */
+   
 .teaching-content {
     font-size: 16px;
     line-height: 1.8;

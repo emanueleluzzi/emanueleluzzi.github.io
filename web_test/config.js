@@ -64,16 +64,19 @@ const CONFIG = {
     
     // Discussions/Blog posts
     discussions: [
-        {
-            title: "Heterogeneous Beliefs Recovery",
-            date: "SFI PhD Workshop 2024",
-            description: ""
-        },
-        {
-            title: "Corporate Earnings Calls and Analyst Beliefs",
-            date: "SFI PhD Workshop 2025",
-            description: ""
-        },
+    {
+        title: "Corporate Earnings Calls and Analyst Beliefs",
+        date: "SFI PhD Workshop 2025",
+        description: "",
+        ppt: "Corporate Earnings - Discussion.pdf"  // Add your filename here
+    },
+    {
+        title: "Heterogeneous Beliefs Recovery",
+        date: "SFI PhD Workshop 2024",
+        description: "",
+        ppt: "Heterogenous Beliefs Recovery - Discussion.pdf"  // Add your filename here
+    },
+],
         // {
         //     title: "Python vs R for Financial Econometrics",
         //     date: "September 2024",

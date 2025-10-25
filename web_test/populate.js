@@ -172,7 +172,10 @@ document.addEventListener('DOMContentLoaded', function() {
         CONFIG.discussions.forEach(discussion => {
             const discussionHTML = `
                 <div class="discussion-item">
-                    <div class="discussion-title">${discussion.title}</div>
+                    <div class="discussion-title">
+                        ${discussion.title}
+                        ${discussion.ppt ? `<a href="ppt/${discussion.ppt}" target="_blank" class="slides-icon" title="View Slides">📊</a>` : ''}
+                    </div>
                     <div class="discussion-date">${discussion.date}</div>
                     ${discussion.description ? `<p>${discussion.description}</p>` : ''}
                     ${discussion.ppt ? `<a href="ppt/${discussion.ppt}" target="_blank" style="color: var(--link-color); text-decoration: none;">View Slides</a>` : ''}
