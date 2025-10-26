@@ -287,6 +287,27 @@ h2 {
     font-style: italic;
 }
 
+.paper-status {
+    font-size: 14px;
+    color: #2980b9;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.paper-conference {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+.paper-prizes {
+    font-size: 14px;
+    color: #27ae60;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
 .expand-icon {
     font-size: 20px;
     color: #999;

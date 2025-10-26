@@ -81,7 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="paper-header">
                         <div class="paper-title-section">
                             <div class="paper-title">${paper.title}</div>
+                            ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
                             <div class="paper-coauthors">${paper.coauthors}</div>
+                            ${paper.conference ? `<div class="paper-conference">${paper.conference}</div>` : ''}
+                            ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
                         </div>
                         <span class="expand-icon">›</span>
                     </div>
