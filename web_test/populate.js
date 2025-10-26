@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const courseHTML = `
                 <div class="course-item">
                     <div class="course-title">${course.title}</div>
+                     ${course.role ? `<div class="course-role">${course.role}</div>` : ''}
                     <div class="course-details">${course.employer} | ${course.semester}${course.level ? ' | ' + course.level : ''}</div>
                     ${course.description ? `<div class="course-description">${course.description}</div>` : ''}
                 </div>

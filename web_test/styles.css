@@ -473,6 +473,13 @@ h2 {
     margin-bottom: 8px;
 }
 
+.course-role {
+    font-size: 15px;
+    color: #666;
+    margin-top: 4px;
+    font-style: italic;
+}
+
 .course-details {
     font-size: 15px;
     color: #666;
