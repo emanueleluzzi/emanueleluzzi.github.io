@@ -1,10 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Personal Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emanuele Luzzi - Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello from my future Page!</h1>
-    <p>This site is currently under construction. Please check back soon!</p>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-name">Emanuele Luzzi</div>
+            
+            <div class="hamburger" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#research">Research</a>
+                <a href="pdf/cv.pdf" target="_blank">CV</a>
+                <a href="#discussions">Discussions</a>
+                <a href="#teaching">Teaching</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <div class="container">
+        
+        <!-- ==================== HOME/INTRO SECTION ==================== -->
+        <section id="home" class="intro">
+            <div class="profile-image-container">
+                <img src="images/round_image.png" alt="Emanuele Luzzi" class="profile-image">
+            </div>
+            
+            <div class="intro-content">
+                <h1>Emanuele Luzzi</h1>
+                <div class="subtitle">PhD Candidate in Finance</div>
+                <div class="affiliation">Swiss Finance Institute @ USI Lugano</div>
+                <div class="interests"><strong>Research Interests:</strong> Financial Intermediation, Asset Pricing and applications of Machine Learning in Finance</div>
+                
+                <div class="bio">
+                    I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My research focuses on the intersection of financial intermediation, asset pricing, and applications of machine learning in finance.
+                </div>
+                
+                <div class="contact-links">
+                    <a href="mailto:emanuele.luzzi@usi.ch">Email</a>
+                    <a href="https://www.linkedin.com/in/emanuele-luzzi-6bb39a124/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/emanueleLuzzi" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== RESEARCH SECTION (WRAPPER) ==================== -->
+        <section id="research">
+            
+            <!-- ==================== WORKING PAPERS ==================== -->
+            <div id="working-papers" class="research-subsection">
+                <h2>Working Papers</h2>
+                <div class="papers-list">
+                    <!-- Papers will be populated from config.js -->
+                </div>
+            </div>
+            
+            <!-- ==================== WORK IN PROGRESS ==================== -->
+            <div id="work-in-progress" class="research-subsection">
+                <h2>Work in Progress</h2>
+                <div class="wip-list">
+                    <!-- Work in progress papers will be populated from config.js -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== DISCUSSIONS SECTION ==================== -->
+        <section id="discussions">
+            <h2>Discussions</h2>
+            
+            <div class="discussions-content">
+                <!-- Discussions will be populated from config.js -->
+            </div>
+        </section>
+        
+        <!-- ==================== TEACHING SECTION ==================== -->
+        <section id="teaching">
+            <h2>Teaching</h2>
+            
+            <div class="teaching-content">
+                <!-- Teaching experience will be populated from config.js -->
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        © 2025 Emanuele Luzzi. Last updated: October 2025.
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script src="populate.js"></script>
 </body>
 </html>
