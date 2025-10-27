@@ -68,7 +68,8 @@ const CONFIG = {
             conference: "", 
             abstract: "",
             prizes: "", 
-            comingSoon: true,
+            slides: "",
+            comingSoon: false,
             // figure: "images/placeholder.png",
             // figureCaption: "Figure: Preliminary Results"
         },

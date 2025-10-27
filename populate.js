@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <span class="expand-icon">›</span>
                     </div>
+                    <div class="paper-links">${linksHTML}</div>
                     <div class="paper-details">
                         <div class="paper-content">
                             <div class="paper-text">
                                 <div class="abstract-label">Abstract</div>
                                 <div class="abstract-text">${paper.abstract}</div>
-                                <div class="paper-links">${linksHTML}</div>
                             </div>
                             ${paper.figure ? `
                             <div class="paper-figure">
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Build paper links HTML
             let linksHTML = '';
             if (paper.comingSoon) {
-                linksHTML = '<span style="color: #999;">Coming Soon</span>';
+                linksHTML = '<span style="color: #999;"> </span>';
             } else {
                 if (paper.pdf) linksHTML += `<a href="${paper.pdf}" target="_blank">PDF</a>`;
                 if (paper.ssrn) linksHTML += `<a href="${paper.ssrn}" target="_blank">SSRN</a>`;
@@ -132,14 +132,18 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Create paper HTML
             const paperHTML = `
-                <div class="paper-item" onclick="togglePaper(this)">
-                    <div class="paper-header">
+                <div class="paper-item">
+                     <div class="paper-header" onclick="togglePaper(this.parentElement)">
                         <div class="paper-title-section">
                             <div class="paper-title">${paper.title}</div>
+                            ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
                             <div class="paper-coauthors">${paper.coauthors}</div>
+                            ${paper.conference ? `<div class="paper-conference">${paper.conference}</div>` : ''}
+                            ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
                         </div>
                         <span class="expand-icon">›</span>
                     </div>
+                    <div class="paper-links">${linksHTML}</div>
                     <div class="paper-details">
                         <div class="paper-content">
                             <div class="paper-text">
@@ -147,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="abstract-label">Abstract</div>
                                 <div class="abstract-text">${paper.abstract}</div>
                                 ` : ''}
-                                <div class="paper-links">${linksHTML}</div>
                             </div>
                             ${paper.figure ? `
                             <div class="paper-figure">
