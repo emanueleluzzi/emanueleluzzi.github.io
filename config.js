@@ -13,6 +13,12 @@ const CONFIG = {
     email: "emanuele.luzzi@usi.ch",
     profileImage: "images/round_image.png",
     
+    seo: {
+        pageTitle: "Emanuele Luzzi - PhD Candidate in Finance",
+        description: "PhD candidate in Finance at Swiss Finance Institute and USI Lugano. Research on financial intermediation, asset pricing, and machine learning in finance.",
+        keywords: "Emanuele Luzzi, Finance PhD, Financial Intermediation, Asset Pricing, Machine Learning Finance, Swiss Finance Institute, Job Market"
+    },
+
     // Research interests (will be displayed as comma-separated)
     interests: "Financial Intermediation, Asset Pricing",
     

@@ -222,6 +222,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // UPDATE PAGE TITLE
     // ===================================
     
-    document.title = `${CONFIG.name} - ${CONFIG.title}`;
+    document.title = CONFIG.seo.pageTitle;
+    document.querySelector('meta[name="description"]').content = CONFIG.seo.description;
+    document.querySelector('meta[name="keywords"]').content = CONFIG.seo.keywords;
     
 });
