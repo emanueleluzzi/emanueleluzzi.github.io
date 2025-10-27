@@ -86,7 +86,7 @@ const CONFIG = {
         title: "Heterogeneous Beliefs Recovery",
         date: "SFI PhD Workshop 2024",
         description: "",
-        ppt: "No- Heterogenous Beliefs Recovery - Discussion.pdf"  // Add your filename here
+        ppt: "Heterogenous Beliefs Recovery - Discussion.pdf"  // Add your filename here
     },
 ],
         // {
