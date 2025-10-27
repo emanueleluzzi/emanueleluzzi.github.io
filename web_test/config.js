@@ -74,7 +74,7 @@ const CONFIG = {
         title: "Corporate Earnings Calls and Analyst Beliefs",
         date: "SFI PhD Workshop 2025",
         description: "",
-        ppt: "Corporate Earnings - Discussion.pdf"  // Add your filename here
+        ppt: "NO- Corporate Earnings - Discussion.pdf"  // Add your filename here
     },
     {
         title: "Heterogeneous Beliefs Recovery",
