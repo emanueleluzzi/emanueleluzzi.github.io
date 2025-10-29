@@ -101,25 +101,25 @@ const CONFIG = {
         {
             title: "Computer Science II",
             role: "Teaching Assistant",
-            employer: "USI Lugano | Institute of Finance",
+            employer: "USI Lugano | B.Sc. Economics",
             semester: "2024",
-            level: "B.Sc.",
+            level: "",
             description: ""
         },
         {
             title: "Real Analysis",
             role: "Teaching Assistant",
-            employer: "USI Lugano | Institute of Finance",
+            employer: "USI Lugano | B.Sc. Economics",
             semester: "2023",
-            level: "B.Sc.",
+            level: "",
             description: ""
         },
         {
             title: "Advanced Game Theory",
             role: "Teaching Assistant",
-            employer: "Ulm University | Dpt. of Math and Economics",
+            employer: "Ulm University | M.Sc. Finance",
             semester: "2019",
-            level: "M.Sc.",
+            level: "",
             description: ""
         }
     ],
