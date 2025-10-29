@@ -99,9 +99,9 @@ const CONFIG = {
     // Teaching experience
     teaching: [
         {
-            title: "Computer Science for Economists II",
+            title: "Computer Science II",
             role: "Teaching Assistant",
-            employer: "USI Lugano",
+            employer: "USI Lugano | Institute of Finance",
             semester: "Fall 2024",
             level: "",
             description: ""
@@ -109,7 +109,7 @@ const CONFIG = {
         {
             title: "Mathematics: Real Analysis",
             role: "Teaching Assistant",
-            employer: "USI Lugano",
+            employer: "USI Lugano | Institute of Finance",
             semester: "Fall 2023",
             level: "",
             description: ""
@@ -117,7 +117,7 @@ const CONFIG = {
         {
             title: "Advanced Game Theory",
             role: "Teaching Assistant",
-            employer: "Ulm University",
+            employer: "Ulm University | Department of Mathematics and Economics",
             semester: "Spring 2019",
             level: "",
             description: ""
