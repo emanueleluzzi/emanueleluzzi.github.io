@@ -258,6 +258,18 @@ h2 {
     cursor: pointer;
 }
 
+.wip-list .paper-item {
+    background: white;
+    border-left: 3px solid #e0e0e0;
+    padding: 20px;
+    box-shadow: none;
+}
+
+.wip-list .paper-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left-color: #2980b9;
+}
+
 .paper-item:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }

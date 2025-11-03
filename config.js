@@ -66,10 +66,10 @@ const CONFIG = {
             coauthors: "with Paul Schneider, Rohan Sen, and Marc Van Uffelen",
             status: "", 
             conference: "", 
-            abstract: "",
+            abstract: "Coming soon!",
             prizes: "", 
             slides: "",
-            comingSoon: false,
+            comingSoon: true,
             // figure: "images/placeholder.png",
             // figureCaption: "Figure: Preliminary Results"
         },
