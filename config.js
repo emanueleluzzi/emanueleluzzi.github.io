@@ -20,10 +20,10 @@ const CONFIG = {
     },
 
     // Research interests (will be displayed as comma-separated)
-    interests: "Financial Intermediaries, Asset Pricing and Derivatives",
+    interests: "Asset pricing, Financial Intermediation and Asset Management",
     
     // Bio paragraph
-    bio: "I am a PhD candidate in Finance at the Swiss Finance Institute and USI Lugano. My interests focus on financial intermediation, asset pricing, and applications of machine learning in finance.",
+    bio:  "My research examines decision-making by investment funds and asset pricing puzzles, combining empirical detail with quantitative methods including machine learning.",
     
     // Contact links
     links: {
