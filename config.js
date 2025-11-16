@@ -9,7 +9,7 @@ const CONFIG = {
     // Your basic information
     name: "Emanuele Luzzi",
     title: "PhD Candidate in Finance",
-    affiliation: "Swiss Finance Institute @ USI Lugano",
+    affiliation: "USI Lugano and Swiss Finance Institute",
     email: "emanuele.luzzi@usi.ch",
     profileImage: "images/round_image.png",
     
