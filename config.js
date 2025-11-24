@@ -15,7 +15,7 @@ const CONFIG = {
     
     seo: {
         pageTitle: "Emanuele Luzzi - PhD Candidate in Finance",
-        description: "PhD candidate in Finance at Swiss Finance Institute and USI Lugano. Research on financial intermediation, asset pricing, and machine learning in finance.",
+        description: "PhD candidate in Finance at Swiss Finance Institute and USI Lugano. Research on financial intermediation, asset pricing, asset management and machine learning in finance.",
         keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Financial Intermediation, Asset Pricing, Machine Learning, Swiss Finance Institute, Job Market, Lugano, JMP, USI Lugano"
     },
 
@@ -81,7 +81,7 @@ const CONFIG = {
         title: "Corporate Earnings Calls and Analyst Beliefs",
         date: "SFI PhD Workshop 2025",
         description: "",
-        ppt: "NO- Corporate Earnings - Discussion.pdf"  // Add your filename here
+        ppt: "Corporate Earnings - Discussion.pdf"  // Add your filename here
     },
     {
         title: "Heterogeneous Beliefs Recovery",
