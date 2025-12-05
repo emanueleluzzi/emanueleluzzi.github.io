@@ -42,7 +42,7 @@ const CONFIG = {
             pdf: "",
             status: "", 
             prizes: "", 
-            conference: "University of Geneva (Brown-Bag), FinEML (Erasmus) 2025, SoFiE (ESSEC) 2025, Queen Mary PhD Student Workshop 2025, USI Lugano Brown-Bag Seminar 2025, SFI PhD Student Workshop 2024", 
+            conference: "University of Geneva (Brown-Bag) 2025, FinEML (Erasmus) 2025, SoFiE (ESSEC) 2025, Queen Mary PhD Student Workshop 2025, USI Lugano (Brown-Bag) 2025, SFI PhD Student Workshop 2024", 
             ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5634612",
             slides: "",
             figure: "images/LSDFvNPO paper_pic.png",
