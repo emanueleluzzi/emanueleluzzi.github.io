@@ -78,6 +78,12 @@ const CONFIG = {
     // Discussions/Blog posts
     discussions: [
     {
+        title: "Machine Learning Mutual Fund Flows",
+        date: "EUROFIDAI-ESSEC Paris December Finance 2025",
+        description: "",
+        ppt: "Machine Learning Mutual Fund Flows - Discussion.pdf"  // Add your filename here
+    },
+    {
         title: "Corporate Earnings Calls and Analyst Beliefs",
         date: "SFI PhD Workshop 2025",
         description: "",
