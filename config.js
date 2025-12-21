@@ -16,11 +16,11 @@ const CONFIG = {
     seo: {
         pageTitle: "Emanuele Luzzi",
         description: "PhD candidate in Finance at Swiss Finance Institute and USI Lugano. Asset Pricing, Asset Management and Financial Intermediation.",
-        keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Asset Pricing, Asset Management, Financial Intermediation, Machine Learning, Swiss Finance Institute, Job Market, Lugano, JMP, USI Lugano"
+        keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Asset Pricing, Asset Management, Financial Intermediation, Machine Learning, Swiss Finance Institute, Swiss, Finance, Institute, Job Market, Lugano, JMP, USI Lugano"
     },
 
     // Research interests (will be displayed as comma-separated)
-    interests: "Asset pricing, Financial Intermediation and Asset Management",
+    interests: "Asset Pricing, Asset Management and Financial Intermediation",
     
     // Bio paragraph
     bio:  "My research examines decision-making by investment funds and asset pricing puzzles, combining empirical detail with quantitative methods including machine learning.",
