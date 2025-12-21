@@ -14,9 +14,9 @@ const CONFIG = {
     profileImage: "images/round_image.png",
     
     seo: {
-        pageTitle: "Emanuele Luzzi - PhD Candidate in Finance",
+        pageTitle: "Emanuele Luzzi",
         description: "PhD candidate in Finance at Swiss Finance Institute and USI Lugano. Asset Pricing, Asset Management and Financial Intermediation.",
-        keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Financial Intermediation, Asset Pricing, Machine Learning, Swiss Finance Institute, Job Market, Lugano, JMP, USI Lugano"
+        keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Asset Pricing, Asset Management, Financial Intermediation, Machine Learning, Swiss Finance Institute, Job Market, Lugano, JMP, USI Lugano"
     },
 
     // Research interests (will be displayed as comma-separated)
