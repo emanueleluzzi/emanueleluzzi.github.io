@@ -1,0 +1,55 @@
+# ===================================
+# GITIGNORE FOR ACADEMIC WEBSITE
+# ===================================
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Archive and draft folders
+archive/
+drafts/
+old/
+backup/
+_old/
+_archive/
+_drafts/
+images/archive/
+pdf/archive/
+ppt/archive/
+
+# Temporary and log files
+*.log
+*.tmp
+*.temp
+*.bak
+
+# Node (if you ever use build tools)
+node_modules/
+npm-debug.log
+
+# Local development
+.env
+.env.local
+*.local
+
+# Notes and personal files
+notes.txt
+todo.txt
+TODO.md
+NOTES.md
+personal/
+private/
