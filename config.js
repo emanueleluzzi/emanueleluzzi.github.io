@@ -9,12 +9,12 @@ const CONFIG = {
     // Your basic information
     name: "Emanuele Luzzi",
     title: "PhD Candidate in Finance",
-    affiliation: "USI Lugano and Swiss Finance Institute",
+    affiliation: "Swiss Finance Institute @ USI",
     email: "emanuele.luzzi@usi.ch",
     profileImage: "images/round_image.png",
     
     seo: {
-        pageTitle: "Emanuele Luzzi",
+        pageTitle: "Emanuele Luzzi",    
         description: "PhD candidate in Finance at Swiss Finance Institute and USI Lugano. Asset Pricing, Asset Management and Financial Intermediation.",
         keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Asset Pricing, Asset Management, Financial Intermediation, Machine Learning, Swiss Finance Institute, Swiss, Finance, Institute, Job Market, Lugano, JMP, USI Lugano"
     },
@@ -23,7 +23,7 @@ const CONFIG = {
     interests: "Asset Pricing, Asset Management and Financial Intermediation",
     
     // Bio paragraph
-    bio:  "My research examines decision-making by investment funds and asset pricing puzzles, combining empirical detail with quantitative methods including machine learning.",
+    bio:  "My research examines decision-making by investment funds and asset pricing puzzles, combining empirical work with application of quantitative methods, especially machine learning.",
     
     // Contact links
     links: {
@@ -133,6 +133,6 @@ const CONFIG = {
     // Footer
     footer: {
         copyright: "© 2025 Emanuele Luzzi",
-        lastUpdated: "October 2025"
+        lastUpdated: "December 2025"
     }
 };
