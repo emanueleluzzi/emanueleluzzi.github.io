@@ -20,10 +20,10 @@ const CONFIG = {
     },
 
     // Research interests (will be displayed as comma-separated)
-    interests: "Asset Pricing, Asset Management and Financial Intermediation",
+    interests: "Asset Pricing, Asset Management and Non-Bank Financial Intermediation",
     
     // Bio paragraph
-    bio:  "My research examines decision-making by investment funds and asset pricing puzzles, combining empirical work with application of quantitative methods, especially machine learning.",
+    bio:  "I am interested in heterogeneities and frictions in financial markets, using information embedded in asset prices and investment portfolio decisions. I combine empirical work with the application of quantitative methods, particularly machine learning.",
     
     // Contact links
     links: {
