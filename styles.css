@@ -42,7 +42,7 @@ body {
     line-height: 1.7;
     color: var(--text-color);
     background: white;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 html {
@@ -72,7 +72,7 @@ nav {
 }
 
 .nav-name {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     color: var(--primary-color);
 }
@@ -290,42 +290,42 @@ h2 {
 }
 
 .paper-title {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--primary-color);
     line-height: 1.5;
 }
 
 .paper-coauthors {
-    font-size: 13px;
+    font-size: 15px;
     color: #666;
     margin-top: 4px;
     font-style: italic;
 }
 
 .paper-status {
-    font-size: 13px;
+    font-size: 15px;
     color: #2980b9;
     margin-top: 3px;
     font-weight: 500;
 }
 
 .paper-conference {
-    font-size: 13px;
+    font-size: 15px;
     color: #888;
     margin-top: 3px;
     font-style: italic;
 }
 
 .paper-prizes {
-    font-size: 13px;
+    font-size: 15px;
     color: #27ae60;
     margin-top: 3px;
     font-weight: 500;
 }
 
 .expand-icon {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--link-color);
     border: 1px solid var(--link-color);
     border-radius: 4px;
@@ -387,7 +387,7 @@ h2 {
 }
 
 .figure-caption {
-    font-size: 13px;
+    font-size: 15px;
     color: #666;
     margin-top: 8px;
     font-style: italic;
@@ -419,7 +419,7 @@ h2 {
 .paper-links a {
     color: var(--link-color);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     padding: 6px 12px;
     border: 1px solid var(--link-color);
     border-radius: 4px;
@@ -436,7 +436,7 @@ h2 {
    =================================== */
 
 .discussions-content {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.8;
     color: #555;
 }
@@ -454,7 +454,7 @@ h2 {
 }
 
 .slides-icon {
-    font-size: 16px;
+    font-size: 17px;
     text-decoration: none;
     opacity: 0.7;
     transition: opacity 0.3s ease;
@@ -465,7 +465,7 @@ h2 {
 }
 
 .discussion-item {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     padding: 12px 16px;
     border-left: 3px solid var(--border-color);
     transition: border-color 0.2s ease;
@@ -476,14 +476,14 @@ h2 {
 }
 
 .discussion-title {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--primary-color);
     margin-bottom: 4px;
 }
 
 .discussion-date {
-    font-size: 13px;
+    font-size: 15px;
     color: #999;
     margin-bottom: 0;
 }
@@ -493,12 +493,12 @@ h2 {
    =================================== */
    
 .teaching-content {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
 }
 
 .course-item {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
     padding: 12px 16px;
     border-left: 3px solid var(--border-color);
     transition: border-color 0.2s ease;
@@ -509,21 +509,21 @@ h2 {
 }
 
 .course-title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--primary-color);
     margin-bottom: 2px;
 }
 
 .course-role {
-    font-size: 13px;
+    font-size: 15px;
     color: #666;
     margin-top: 2px;
     font-style: italic;
 }
 
 .course-details {
-    font-size: 13px;
+    font-size: 15px;
     color: #999;
     margin-bottom: 0;
 }
@@ -578,7 +578,7 @@ footer {
     .nav-links a {
         padding: 18px 24px;
         border-bottom: 1px solid var(--border-color);
-        font-size: 16px;
+        font-size: 15px;
     }
     
     .container {
@@ -628,6 +628,14 @@ footer {
         gap: 10px;
     }
 
+
+    .paper-footer-row .paper-links {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    align-items: center;
+    }  
+ 
     .paper-footer-row {
     display: flex;
     flex-direction: row;
@@ -635,12 +643,6 @@ footer {
     align-items: center;
     margin-top: 10px;
     width: 100%;
-    }
-
-q.paper-footer-row .paper-links {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0;
     }
 
     .paper-header-right {
