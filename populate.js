@@ -77,34 +77,34 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Create paper HTML
             const paperHTML = `
-                <div class="paper-item" onclick="togglePaper(this)">
-                    <div class="paper-header">
-                        <div class="paper-title-section">
-                            <div class="paper-title">${paper.title}</div>
-                            ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
-                            <div class="paper-coauthors">${paper.coauthors}</div>
-                            ${paper.conference ? `<div class="paper-conference">${paper.conference}</div>` : ''}
-                            ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
-                        </div>
-                        <span class="expand-icon">›</span>
-                    </div>
-                    <div class="paper-links">${linksHTML}</div>
-                    <div class="paper-details">
-                        <div class="paper-content">
-                            <div class="paper-text">
-                                <div class="abstract-label">Abstract</div>
-                                <div class="abstract-text">${paper.abstract}</div>
-                            </div>
-                            ${paper.figure ? `
-                            <div class="paper-figure">
-                                <img src="${paper.figure}" alt="Paper Figure">
-                                ${paper.figureCaption ? `<div class="figure-caption">${paper.figureCaption}</div>` : ''}
-                            </div>
-                            ` : ''}
-                        </div>
-                    </div>
+             <div class="paper-item" onclick="togglePaper(this)">
+                <div class="paper-title-section">
+            <div class="paper-title">${paper.title}</div>
+            ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
+            <div class="paper-coauthors">${paper.coauthors}</div>
+            ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
+             </div>
+             <div class="paper-footer-row">
+            <span class="expand-icon">More ›</span>
+            <div class="paper-links">${linksHTML}</div>
+             </div>
+                <div class="paper-details">
+            <div class="paper-content">
+                <div class="paper-text">
+                    ${paper.conference ? `<div class="paper-conference" style="margin-bottom:12px;">${paper.conference}</div>` : ''}
+                    <div class="abstract-label">Abstract</div>
+                    <div class="abstract-text">${paper.abstract}</div>
                 </div>
-            `;
+                ${paper.figure ? `
+                <div class="paper-figure">
+                    <img src="${paper.figure}" alt="Paper Figure">
+                    ${paper.figureCaption ? `<div class="figure-caption">${paper.figureCaption}</div>` : ''}
+                </div>
+                ` : ''}
+                 </div>
+                </div>
+            </div>
+`       ;
             
             papersList.innerHTML += paperHTML;
         });
@@ -132,21 +132,21 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Create paper HTML
             const paperHTML = `
-                <div class="paper-item">
-                     <div class="paper-header" onclick="togglePaper(this.parentElement)">
-                        <div class="paper-title-section">
-                            <div class="paper-title">${paper.title}</div>
-                            ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
-                            <div class="paper-coauthors">${paper.coauthors}</div>
-                            ${paper.conference ? `<div class="paper-conference">${paper.conference}</div>` : ''}
-                            ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
-                        </div>
-                        <span class="expand-icon">›</span>
+                <div class="paper-item" onclick="togglePaper(this)">
+                    <div class="paper-title-section">
+                        <div class="paper-title">${paper.title}</div>
+                        ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
+                        <div class="paper-coauthors">${paper.coauthors}</div>
+                        ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
                     </div>
-                    <div class="paper-links">${linksHTML}</div>
+                    <div class="paper-footer-row">
+                        <span class="expand-icon">More ›</span>
+                        <div class="paper-links">${linksHTML}</div>
+                    </div>
                     <div class="paper-details">
                         <div class="paper-content">
                             <div class="paper-text">
+                                ${paper.conference ? `<div class="paper-conference" style="margin-bottom:12px;">${paper.conference}</div>` : ''}
                                 ${paper.abstract ? `
                                 <div class="abstract-label">Abstract</div>
                                 <div class="abstract-text">${paper.abstract}</div>
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             `;
-            
+                        
             wipList.innerHTML += paperHTML;
         });
     }
@@ -180,11 +180,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="discussion-item">
                     <div class="discussion-title">
                         ${discussion.title}
-                        ${discussion.ppt ? `<a href="ppt/${discussion.ppt}" target="_blank" class="slides-icon" title="View Slides">📊</a>` : ''}
+                         ${discussion.ppt ? `<a href="ppt/${discussion.ppt}" target="_blank" class="paper-links" style="margin-top:0;"><span>Slides</span></a>` : ''}
                     </div>
                     <div class="discussion-date">${discussion.date}</div>
                     ${discussion.description ? `<p>${discussion.description}</p>` : ''}
-                    ${discussion.ppt ? `<a href="ppt/${discussion.ppt}" target="_blank" style="color: var(--link-color); text-decoration: none;">View Slides</a>` : ''}
                 </div>
             `;
             discussionsContent.innerHTML += discussionHTML;

@@ -13,6 +13,10 @@ function togglePaper(element) {
         return;
     }
     element.classList.toggle('expanded');
+    const icon = element.querySelector('.expand-icon');
+    if (icon) {
+        icon.textContent = element.classList.contains('expanded') ? 'Less ‹' : 'More ›';
+    }
 }
 
 function toggleMobileNav() {

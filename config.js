@@ -105,6 +105,15 @@ const CONFIG = {
     // Teaching experience
     teaching: [
         {
+            title: "Arbitrage Pricing",
+            role: "Teaching Assistant",
+            employer: "USI Lugano | M.Sc. Finance",
+            semester: "2026",
+            level: "",
+            description: ""
+        },
+
+        {
             title: "Computer Science",
             role: "Teaching Assistant",
             employer: "USI Lugano | B.Sc. Economics",
