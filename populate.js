@@ -84,10 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="paper-coauthors">${paper.coauthors}</div>
             ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
              </div>
-             <div class="paper-footer-row">
+            <div class="paper-footer-row">
             <span class="expand-icon">More ›</span>
-            <div class="paper-links">${linksHTML}</div>
-             </div>
+            <div class="paper-footer-links">${linksHTML}</div>
+                </div>
                 <div class="paper-details">
             <div class="paper-content">
                 <div class="paper-text">
@@ -140,9 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
                     </div>
                     <div class="paper-footer-row">
-                        <span class="expand-icon">More ›</span>
-                        <div class="paper-links">${linksHTML}</div>
-                    </div>
+                    <span class="expand-icon">More ›</span>
+                    <div class="paper-footer-links">${linksHTML}</div>
                     <div class="paper-details">
                         <div class="paper-content">
                             <div class="paper-text">
