@@ -549,9 +549,11 @@ footer {
    12. RESPONSIVE DESIGN (MOBILE)
    =================================== */
 @media (max-width: 768px) {
-    .nav-container {
-        padding: 0 20px;
+    .paper-header {
+        flex-direction: column;
+        gap: 10px;
     }
+}
     
     .hamburger {
         display: flex;
@@ -681,4 +683,3 @@ footer {
     .expand-icon {
         align-self: flex-start;
     }
-}
