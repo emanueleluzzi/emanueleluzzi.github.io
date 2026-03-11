@@ -23,7 +23,7 @@ const CONFIG = {
     interests: "Asset Pricing, Asset Management and Financial Econometrics",
     
     // Bio paragraph
-    bio:  "My research focuses on asset pricing and investment decisions. I combine empirical work with quantitative methods, including machine learning.",
+    bio:  "My research focuses on asset pricing and investment decisions. I combine empirical work with quantitative methods, especially machine learning.",
     
     // Contact links
     links: {
