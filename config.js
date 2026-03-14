@@ -37,8 +37,8 @@ const CONFIG = {
     papers: [
         {
             title: "Learning the Stochastic Discount Factor via Nonparametric Option Portfolios",
-            coauthors: "with Paul Schneider and Rohan Sen",
-            abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios. Our nonparametric approach leverages the classical duality between the minimum-variance SDF and the maximum Sharpe ratio portfolio, and comes with finite-sample performance guarantees, as well as a formal testing framework for the monotonicity and convexity of the SDF. We perform an empirical study in the S\&P 500 market and find heterogeneous shapes across different states of the world as measured by the price of volatility and the maturities of options. While SDF implied by monthly options are monotonically decreasing, their convexity/concavity is less pronounced.  Ultra-short ODTE options, on the contrary, exhibit a pronounced U-shape in higher-volatility states. Our empirical results are robust across various models of the information set.",
+            coauthors: "with P. Schneider and R. Sen",
+            abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios. Our nonparametric approach leverages the classical duality between the minimum-variance SDF and the maximum Sharpe ratio portfolio, and comes with finite-sample performance guarantees, as well as a formal testing framework for the monotonicity and convexity of the SDF. We perform an empirical study in the S&P 500 market and find that investor risk preferences, as revealed by the shape of the SDF, vary systematically across volatility regimes and progressively across option maturities, reflecting richer and more heterogeneous structures at shorter horizons. Our empirical results are robust across various models of the information set. ",
             pdf: "",
             status: "", 
             prizes: "", 
@@ -63,7 +63,7 @@ const CONFIG = {
     workInProgress: [
         {
             title: "Optimal Variance Swaps",
-            coauthors: "with Paul Schneider, Rohan Sen, and Marc Van Uffelen",
+            coauthors: "with P. Schneider, R.Sen,",
             status: "", 
             conference: "Financial Econometrics in the Age of Big Data (HKUST) [Poster] 2025", 
             abstract: "Profits from variance swaps, such as the trading strategy replicating the squared VIX, are highly skewed and leptokurtic, rendering them problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically. The result is a readily implementable delta-hedged option play on variance. Our approach comes with both asymptotic and finite-sample guarantees. In-sample Sharpe ratios by far exceed those of comparable variance swaps such as VIX or SVIX squared.",
@@ -142,6 +142,6 @@ const CONFIG = {
     // Footer
     footer: {
         copyright: "© 2025 Emanuele Luzzi",
-        lastUpdated: "December 2025"
+        lastUpdated: new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
     }
 };
