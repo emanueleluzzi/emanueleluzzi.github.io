@@ -63,7 +63,7 @@ const CONFIG = {
     workInProgress: [
         {
             title: "Optimal Variance Swaps",
-            coauthors: "with P. Schneider, R.Sen,",
+            coauthors: "with P. Schneider and R.Sen",
             status: "", 
             conference: "Financial Econometrics in the Age of Big Data (HKUST) [Poster] 2025", 
             abstract: "Profits from variance swaps, such as the trading strategy replicating the squared VIX, are highly skewed and leptokurtic, rendering them problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically. The result is a readily implementable delta-hedged option play on variance. Our approach comes with both asymptotic and finite-sample guarantees. In-sample Sharpe ratios by far exceed those of comparable variance swaps such as VIX or SVIX squared.",
