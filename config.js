@@ -38,7 +38,7 @@ const CONFIG = {
         {
             title: "Learning Risk Preferences from Option Portfolios",
             coauthors: "with P. Schneider and R. Sen",
-            abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios. Our nonparametric approach leverages the classical duality between the minimum-variance SDF and the maximum Sharpe ratio portfolio, and comes with finite-sample performance guarantees, as well as a formal testing framework for the monotonicity and convexity of the SDF. We perform an empirical study in the S&P 500 market and find that investor risk preferences, as revealed by the shape of the SDF, vary systematically across volatility regimes and progressively across option maturities, reflecting richer and more heterogeneous structures at shorter horizons. Our empirical results are robust across various models of the information set. ",
+            abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios and find that investor risk preferences, as revealed by the shape of the SDF, vary systematically across volatility regimes and progressively across option maturities.",
             pdf: "",
             status: "", 
             prizes: "", 
@@ -66,7 +66,7 @@ const CONFIG = {
             coauthors: "with P. Schneider and R.Sen",
             status: "", 
             conference: "Financial Econometrics in the Age of Big Data (HKUST) [Poster] 2025", 
-            abstract: "Profits from variance swaps, such as the trading strategy replicating the squared VIX, are highly skewed and leptokurtic, rendering them problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically. The result is a readily implementable delta-hedged option play on variance. Our approach comes with both asymptotic and finite-sample guarantees. In-sample Sharpe ratios by far exceed those of comparable variance swaps such as VIX or SVIX squared.",
+            abstract: "Profits from variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
             prizes: "", 
             slides: "",
             comingSoon: true,
