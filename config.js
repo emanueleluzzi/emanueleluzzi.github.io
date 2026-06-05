@@ -83,12 +83,22 @@ const CONFIG = {
         description: "",
         ppt: "Machine Learning Mutual Fund Flows - Discussion.pdf"  // Add your filename here
     },
+
     {
         title: "Corporate Earnings Calls and Analyst Beliefs",
         date: "SFI PhD Workshop 2025",
         description: "",
         ppt: "Corporate Earnings - Discussion.pdf"  // Add your filename here
     },
+
+    {
+        title: "Double Machine Learning for Static Panel Data with Instrumental Variables",
+        date: "Queen Mary - PhD Student Workshop 2025",
+        description: "",
+        ppt: "DML - Discussion.pdf"  // Add your filename here
+    },
+
+
     {
         title: "Heterogeneous Beliefs Recovery",
         date: "SFI PhD Workshop 2024",
