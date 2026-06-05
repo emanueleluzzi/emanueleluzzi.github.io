@@ -37,7 +37,7 @@ const CONFIG = {
     papers: [
         {
             title: "Learning Risk Preferences from Option Portfolios",
-            coauthors: "with P. Schneider and R. Sen",
+            coauthors: "with Paul Schneider and Rohan Sen",
             abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios and find that investor risk preferences, as revealed by the shape of the SDF, vary systematically across volatility regimes and progressively across option maturities.",
             pdf: "",
             status: "", 
@@ -63,7 +63,7 @@ const CONFIG = {
     workInProgress: [
         {
             title: "Optimal Variance Swaps",
-            coauthors: "with P. Schneider and R.Sen",
+            coauthors: "with Paul Schneider and Rohan Sen",
             status: "", 
             conference: "Financial Econometrics in the Age of Big Data [Poster] 2025 - HKUST", 
             abstract: "Profits from variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
@@ -79,31 +79,31 @@ const CONFIG = {
     discussions: [
     {
         title: "Machine Learning Mutual Fund Flows",
+        authors: "J. Fausch, M. Frigg, S. Ruenzi, F. Weigert",
         date: "EUROFIDAI-ESSEC Paris December Finance 2025",
         description: "",
-        ppt: "Machine Learning Mutual Fund Flows - Discussion.pdf"  // Add your filename here
+        ppt: "Machine Learning Mutual Fund Flows - Discussion.pdf"
     },
-
     {
         title: "Corporate Earnings Calls and Analyst Beliefs",
+        authors: "Giuseppe Matera",
         date: "SFI PhD Workshop 2025",
         description: "",
-        ppt: "Corporate Earnings - Discussion.pdf"  // Add your filename here
+        ppt: "Corporate Earnings - Discussion.pdf"
     },
-
     {
         title: "Double Machine Learning for Static Panel Data with Instrumental Variables",
+        authors: "A. Baiardi, P. Clarke, A. Naghi, A. Polselli",
         date: "Queen Mary - PhD Student Workshop 2025",
         description: "",
-        ppt: "DML - Discussion.pdf"  // Add your filename here
+        ppt: "DML - Discussion.pdf"
     },
-
-
     {
         title: "Heterogeneous Beliefs Recovery",
+        authors: "Julien Hugonnier, Darius Nik Nejad",
         date: "SFI PhD Workshop 2024",
         description: "",
-        ppt: "Heterogenous Beliefs Recovery - Discussion.pdf"  // Add your filename here
+        ppt: "Heterogenous Beliefs Recovery - Discussion.pdf"
     },
 ],
         // {

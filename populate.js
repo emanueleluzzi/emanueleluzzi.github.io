@@ -68,12 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="paper-text">
                             ${paper.abstract ? `<div class="abstract-text">${paper.abstract}</div>` : ''}
                         </div>
-                        ${paper.figure ? `
                         <div class="paper-figure">
-                            <img src="${paper.figure}" alt="Paper Figure">
-                            ${paper.figureCaption ? `<div class="figure-caption">${paper.figureCaption}</div>` : ''}
+                            ${paper.figure ? `
+                                <img src="${paper.figure}" alt="Paper Figure">
+                                ${paper.figureCaption ? `<div class="figure-caption">${paper.figureCaption}</div>` : ''}
+                            ` : ''}
                         </div>
-                        ` : ''}
                     </div>
                 </div>
             </div>
@@ -104,7 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
         discussionsContent.innerHTML = CONFIG.discussions.map(discussion => `
             <div class="discussion-item">
                 <span class="discussion-title">${discussion.title}</span>
-                <span class="discussion-date">— ${discussion.date}</span>
+                <span class="discussion-authors">${discussion.authors || ''}</span>
+                <span class="discussion-date">${discussion.date}</span>
                 ${discussion.ppt ? `<a href="ppt/${discussion.ppt}" target="_blank" class="discussion-link">slides</a>` : ''}
                 ${discussion.description ? `<span class="discussion-desc">${discussion.description}</span>` : ''}
             </div>
@@ -119,8 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         teachingContent.innerHTML = CONFIG.teaching.map(course => `
             <div class="course-item">
                 <span class="course-title">${course.title}</span>
-                ${course.role ? `<span class="course-role">— ${course.role}</span>` : ''}
-                <span class="course-details">— ${course.employer} | ${course.semester}${course.level ? ' | ' + course.level : ''}</span>
+                <span class="course-details"> | ${course.role ? course.role + ' — ' : ''}${course.employer} | ${course.semester}${course.level ? ' | ' + course.level : ''}</span>
                 ${course.description ? `<span class="course-description">${course.description}</span>` : ''}
             </div>
         `).join('');
