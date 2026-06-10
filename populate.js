@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="discussion-item">
                 <span class="discussion-title">${discussion.title}</span>
                 <span class="discussion-authors">${discussion.authors || ''}</span>
+                ${discussion.authors && discussion.date ? '<span class="discussion-sep">·</span>' : ''}
                 <span class="discussion-date">${discussion.date}</span>
                 ${discussion.ppt ? `<a href="ppt/${discussion.ppt}" target="_blank" class="discussion-link">slides</a>` : ''}
                 ${discussion.description ? `<span class="discussion-desc">${discussion.description}</span>` : ''}

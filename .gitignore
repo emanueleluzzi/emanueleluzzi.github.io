@@ -19,6 +19,9 @@ Desktop.ini
 *.swo
 *~
 
+# CV LaTeX source — edit locally, only the compiled pdf/cv.pdf is tracked
+cv-src/
+
 # Archive and draft folders
 archive/
 drafts/
