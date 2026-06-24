@@ -65,7 +65,7 @@ const CONFIG = {
             title: "Optimal Variance Swaps",
             coauthors: "with Paul Schneider and Rohan Sen",
             status: "", 
-            conference: "SFI Research Days 2026 - Gerzensee, Financial Econometrics in the Age of Big Data [Poster] 2025 - HKUST",
+            conference: "Society for Financial Econometrics 2026 (SoFiE) - University of Macau, SFI Research Days 2026 - Gerzensee, Financial Econometrics in the Age of Big Data [Poster] 2025 - HKUST",
             abstract: "Profits from variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
             prizes: "", 
             slides: "",
