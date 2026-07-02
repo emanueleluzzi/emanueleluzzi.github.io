@@ -70,8 +70,8 @@ const CONFIG = {
             prizes: "", 
             slides: "",
             comingSoon: true,
-            // figure: "images/placeholder.png",
-            // figureCaption: "Figure: Preliminary Results"
+            figure: "images/OptVSWAP_paper_pic.png",
+            figureCaption: ""
         },
     ],
     
