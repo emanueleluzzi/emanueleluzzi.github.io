@@ -38,7 +38,7 @@ const CONFIG = {
         {
             title: "Learning Risk Preferences from Option Portfolios",
             coauthors: "with Paul Schneider and Rohan Sen",
-            abstract: "We estimate the stochastic discount factor (SDF) by recovering the Sharpe-optimal nonlinear claim through a trading strategy in delta-hedged option portfolios and find that investor risk preferences, as revealed by the shape of the SDF, vary systematically across volatility regimes and progressively across option maturities.",
+            abstract: "We estimate the stochastic discount factor (SDF) through a trading strategy in delta-hedged option portfolios. We find that investor risk preferences, as revealed by the shape of the SDF, vary systematically across volatility regimes and progressively across option maturities.",
             pdf: "",
             status: "", 
             prizes: "", 
@@ -66,7 +66,7 @@ const CONFIG = {
             coauthors: "with Paul Schneider and Rohan Sen",
             status: "", 
             conference: "Society for Financial Econometrics 2026 (SoFiE) - University of Macau, SFI Research Days 2026 - Gerzensee, Financial Econometrics in the Age of Big Data [Poster] 2025 - HKUST",
-            abstract: "Profits from variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
+            abstract: "Which variance swap best captures the preferences of a mean-variance investor? Variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
             prizes: "", 
             slides: "",
             comingSoon: true,
