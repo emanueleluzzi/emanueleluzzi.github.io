@@ -36,7 +36,7 @@ const CONFIG = {
     // Research papers
     papers: [
         {
-            title: "Learning Risk Preferences from Option Portfolios",
+            title: "Tradable Recovery",
             coauthors: "with Paul Schneider and Rohan Sen",
             abstract: "We estimate the stochastic discount factor (SDF) through a trading strategy in delta-hedged option portfolios. We find that investor risk preferences, as revealed by the shape of the SDF, vary systematically across volatility regimes and progressively across option maturities.",
             pdf: "",
