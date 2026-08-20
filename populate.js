@@ -19,15 +19,21 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.profile-image').src = CONFIG.profileImage;
     document.querySelector('.profile-image').alt = CONFIG.name;
 
-    if (CONFIG.interests) {
-        document.querySelector('.intro .interests').innerHTML =
-            `<strong>Research Interests:</strong> ${CONFIG.interests}`;
-    } else {
-        const interestsEl = document.querySelector('.intro .interests');
-        if (interestsEl) interestsEl.style.display = 'none';
-    }
-
     document.querySelector('.intro .bio').textContent = CONFIG.bio;
+
+    // Research interests -> bulleted list (accepts an array or a comma-separated string)
+    const interestsEl = document.querySelector('.intro .interests');
+    const interestItems = Array.isArray(CONFIG.interests)
+        ? CONFIG.interests
+        : (CONFIG.interests || '').split(',').map(s => s.trim()).filter(Boolean);
+
+    if (interestsEl && interestItems.length) {
+        interestsEl.innerHTML =
+            `<span class="interests-label">Research Interests</span>
+             <ul class="interests-list">${interestItems.map(i => `<li>${i}</li>`).join('')}</ul>`;
+    } else if (interestsEl) {
+        interestsEl.style.display = 'none';
+    }
 
     const contactLinksDiv = document.querySelector('.contact-links');
     contactLinksDiv.innerHTML = '';
@@ -39,6 +45,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===================================
     // HELPER: build a paper block
     // ===================================
+    // Conferences/seminars -> "Presentations: A · B · C"
+    function buildPresentationsHTML(conference) {
+        const items = Array.isArray(conference)
+            ? conference
+            : (conference || '').split(',').map(s => s.trim()).filter(Boolean);
+        if (!items.length) return '';
+        // The &nbsp; keeps the dot attached to the item before it, so a line
+        // never starts with a stray separator.
+        const list = items.join('<span class="conf-sep">&nbsp;·</span> ');
+        return `<div class="paper-conference"><span class="presentations-label">Presentations:</span> ${list}</div>`;
+    }
+
     function buildPaperHTML(paper) {
         let linksHTML = '';
         if (paper.comingSoon) {
@@ -56,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="paper-title">${paper.title}</div>
                     ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
                     <div class="paper-coauthors">${paper.coauthors}</div>
-                    ${paper.conference ? `<div class="paper-conference">${paper.conference}</div>` : ''}
+                    ${buildPresentationsHTML(paper.conference)}
                     ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
                 </div>
                 <div class="paper-footer-row">
@@ -121,7 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
         teachingContent.innerHTML = CONFIG.teaching.map(course => `
             <div class="course-item">
                 <span class="course-title">${course.title}</span>
-                <span class="course-details"> | ${course.role ? course.role + ' — ' : ''}${course.employer} | ${course.semester}${course.level ? ' | ' + course.level : ''}</span>
+                <span class="course-sep">·</span>
+                <span class="course-details">${course.role ? course.role + ' — ' : ''}${course.employer} | ${course.semester}${course.level ? ' | ' + course.level : ''}</span>
                 ${course.description ? `<span class="course-description">${course.description}</span>` : ''}
             </div>
         `).join('');

@@ -19,8 +19,12 @@ const CONFIG = {
         keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Asset Pricing, Asset Management, Financial Intermediation, Machine Learning, Swiss Finance Institute, Swiss, Finance, Institute, Job Market, Lugano, JMP, USI Lugano"
     },
 
-    // Research interests (will be displayed as comma-separated)
-    interests: "Asset Pricing, Asset Management and Financial Econometrics",
+    // Research interests (displayed as a bulleted list)
+    interests: [
+        "Asset Pricing",
+        "Asset Management",
+        "Financial Econometrics"
+    ],
     
     // Bio paragraph
     bio:  "My research infers investor and intermediary preferences from prices and portfolio decisions. I combine empirical work with quantitative methods, especially machine learning.",
@@ -42,7 +46,15 @@ const CONFIG = {
             pdf: "",
             status: "", 
             prizes: "", 
-            conference: "Frontiers of Factor Investing 2026 (FoFi) - Lancaster University, University of Geneva - Brown-Bag, Financial Econometrics and Machine Learning 2025 (FinEML) - Erasmus University Rotterdam, Society for Financial Econometrics 2025 (SoFiE) - ESSEC, Queen Mary - PhD Student Workshop, USI Lugano - Brown-Bag, SFI - PhD Student Workshop",
+            conference: [
+                "Frontiers of Factor Investing 2026 (FoFi), Lancaster University",
+                "University of Geneva, Brown-Bag",
+                "Financial Econometrics and Machine Learning 2025 (FinEML), Erasmus University Rotterdam",
+                "Society for Financial Econometrics 2025 (SoFiE), ESSEC",
+                "Queen Mary, PhD Student Workshop",
+                "USI Lugano, Brown-Bag",
+                "SFI, PhD Student Workshop"
+            ],
             ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5634612",
             slides: "",
             figure: "images/LSDFvNPO paper_pic.png",
@@ -65,7 +77,11 @@ const CONFIG = {
             title: "Optimal Variance Swaps",
             coauthors: "with Paul Schneider and Rohan Sen",
             status: "", 
-            conference: "Society for Financial Econometrics 2026 (SoFiE) - University of Macau, SFI Research Days 2026 - Gerzensee, Financial Econometrics in the Age of Big Data [Poster] 2025 - HKUST",
+            conference: [
+                "Society for Financial Econometrics 2026 (SoFiE), University of Macau",
+                "SFI Research Days 2026, Gerzensee",
+                "Financial Econometrics in the Age of Big Data [Poster] 2025, HKUST"
+            ],
             abstract: "Which variance swap best captures the preferences of a mean-variance investor? Variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
             prizes: "", 
             slides: "",
@@ -80,7 +96,7 @@ const CONFIG = {
     {
         title: "Option-Implied Elasticity of Intertemporal Substitution",
         authors: "D. Hager, M. Jehli",
-        date: "SFI Research Days 2026 - Gerzensee",
+        date: "SFI Research Days 2026, Gerzensee",
         description: "",
         ppt: "Option EIS - Discussion.pdf"
     },
@@ -101,7 +117,7 @@ const CONFIG = {
     {
         title: "Double Machine Learning for Static Panel Data with Instrumental Variables",
         authors: "A. Baiardi, P. Clarke, A. Naghi, A. Polselli",
-        date: "Queen Mary - PhD Student Workshop 2025",
+        date: "Queen Mary, PhD Student Workshop 2025",
         description: "",
         ppt: "DML - Discussion.pdf"
     },
