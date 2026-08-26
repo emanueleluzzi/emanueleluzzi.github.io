@@ -10,6 +10,7 @@ const CONFIG = {
     name: "Emanuele Luzzi",
     title: "PhD Candidate in Finance",
     affiliation: "Swiss Finance Institute @ USI Lugano",
+    visiting: "Visiting Scholar, Boston University Questrom School of Business (2026–27)",
     email: "emanuele.luzzi@usi.ch",
     profileImage: "images/round_image.png",
     
@@ -27,7 +28,7 @@ const CONFIG = {
     ],
     
     // Bio paragraph
-    bio:  "My research infers investor and intermediary preferences from prices and portfolio decisions. I combine empirical work with quantitative methods, especially machine learning.",
+    bio:  "My research infers the preferences and beliefs of investors and intermediaries from prices and portfolio decisions, using structural estimation alongside machine learning.",
     
     // Contact links
     links: {

@@ -211,10 +211,17 @@ h2 {
     font-weight: 400;
 }
 
-.intro .affiliation {
+/* Affiliation and visiting position read as two lines of one block, so only the
+   last of them carries the gap (the bio's top margin collapses into it). */
+.intro .affiliation,
+.intro .visiting {
     font-size: 14px;
     color: #666;
+}
+
+.intro .visiting {
     margin-bottom: var(--space-sm);
+    text-wrap: balance;   /* keeps the two centred lines even on narrow screens */
 }
 
 .intro .interests {

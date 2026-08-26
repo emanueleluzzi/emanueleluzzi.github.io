@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.intro h1').textContent = CONFIG.name;
     document.querySelector('.intro .subtitle').textContent = CONFIG.title;
     document.querySelector('.intro .affiliation').textContent = CONFIG.affiliation;
+
+    // Optional visiting position — the element is removed (not hidden) when unset,
+    // so the spacing rules below it don't have to account for an empty line.
+    const visitingEl = document.querySelector('.intro .visiting');
+    if (visitingEl) {
+        if (CONFIG.visiting) visitingEl.textContent = CONFIG.visiting;
+        else visitingEl.remove();
+    }
+
     document.querySelector('.profile-image').src = CONFIG.profileImage;
     document.querySelector('.profile-image').alt = CONFIG.name;
 
