@@ -31,6 +31,8 @@
     
     /* Spacing — golden-ratio ladder (x1.618) off a 16px base.
        Every gap below is one rung of this ladder, not an ad-hoc number. */
+    --space-3xs: 4px;
+    --space-2xs: 6px;
     --space-xs: 10px;
     --space-sm: 16px;
     --space-md: 26px;
@@ -92,7 +94,7 @@ nav {
     background: white;
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    padding: 20px 0;
+    padding: var(--space-sm) 0;
 }
 
 .nav-container {
@@ -112,7 +114,7 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: var(--space-lg);
 }
 
 .nav-links a {
@@ -237,7 +239,7 @@ h2 {
     letter-spacing: 0.8px;
     text-transform: uppercase;
     color: #6b7785;
-    margin-bottom: 6px;
+    margin-bottom: var(--space-2xs);
 }
 
 /* inline-block so the list block can be centred while the bullets stay aligned */
@@ -245,7 +247,7 @@ h2 {
     display: inline-block;
     text-align: left;
     margin: 0;
-    padding-left: 20px;
+    padding-left: var(--space-sm);
     list-style: disc;
 }
 
@@ -280,7 +282,7 @@ h2 {
     text-decoration: none;
     font-size: 14px;
     transition: all 0.3s ease;
-    padding: 6px 14px;
+    padding: var(--space-2xs) var(--space-sm);
     border: 1px solid transparent;
     border-radius: 5px;
 }
@@ -307,8 +309,8 @@ h2 {
     font-size: 22px;
     font-weight: 500;
     color: var(--primary-color);
-    margin-bottom: 30px;
-    padding-bottom: 10px;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-xs);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -346,11 +348,22 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* A card with nothing to expand must not advertise itself as clickable */
+.paper-item.paper-item-static {
+    cursor: default;
+}
+
+.paper-item.paper-item-static:hover,
+.wip-list .paper-item.paper-item-static:hover {
+    box-shadow: none;
+    border-left-color: var(--border-color);
+}
+
 .paper-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
+    gap: var(--space-sm);
 }
 
 .paper-title-section {
@@ -367,21 +380,21 @@ h2 {
 .paper-coauthors {
     font-size: 14px;
     color: #666;
-    margin-top: 3px;
+    margin-top: var(--space-3xs);
     font-style: normal;
 }
 
 .paper-status {
     font-size: 14px;
     color: #2980b9;
-    margin-top: 3px;
+    margin-top: var(--space-3xs);
     font-weight: 500;
 }
 
 .paper-conference {
     font-size: 13px;
     color: #888;
-    margin-top: 6px;
+    margin-top: var(--space-2xs);
     line-height: 1.65;
     font-style: normal;
 }
@@ -398,7 +411,7 @@ h2 {
 .paper-prizes {
     font-size: 14px;
     color: #27ae60;
-    margin-top: 3px;
+    margin-top: var(--space-3xs);
     font-weight: 500;
 }
 
@@ -407,12 +420,11 @@ h2 {
     color: var(--link-color);
     border: 1px solid var(--link-color);
     border-radius: 4px;
-    padding: 3px 8px;
+    padding: var(--space-3xs) var(--space-xs);
     white-space: nowrap;
     transition: all 0.2s ease;
     user-select: none;
     flex-shrink: 0;
-    margin-top: 2px;
 }
 
 .paper-item:hover .expand-icon {
@@ -462,20 +474,20 @@ h2 {
     border-radius: 5px;
     border: 1px solid var(--border-color);
     background: white;
-    padding: 10px;
+    padding: var(--space-xs);
 }
 
 .figure-caption {
     font-size: 12px;
     color: #666;
-    margin-top: 8px;
+    margin-top: var(--space-xs);
     font-style: italic;
 }
 
 .abstract-label {
     font-weight: 500;
     color: var(--primary-color);
-    margin-bottom: 10px;
+    margin-bottom: var(--space-xs);
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -485,13 +497,13 @@ h2 {
     font-size: 15px;
     line-height: 1.8;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: var(--space-sm);
     text-align: justify;
 }
 
 .paper-links {
     display: flex;
-    gap: 8px;
+    gap: var(--space-xs);
     margin-top: 0;
 }
 
@@ -499,7 +511,7 @@ h2 {
     color: var(--link-color);
     text-decoration: none;
     font-size: 13px;
-    padding: 6px 12px;
+    padding: var(--space-2xs) var(--space-xs);
     border: 1px solid var(--link-color);
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -522,7 +534,7 @@ h2 {
 
 .discussion-item,
 .course-item {
-    margin-bottom: 6px;
+    margin-bottom: var(--space-2xs);
     padding: var(--space-xs) var(--space-sm);
     background: white;
     border-left: 3px solid var(--border-color);
@@ -530,7 +542,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 4px;
+    gap: var(--space-3xs);
     transition: all 0.3s ease;
 }
 
@@ -607,7 +619,7 @@ h2 {
     width: 100%;
     font-size: 13px;
     color: #555;
-    margin-top: 4px;
+    margin-top: var(--space-3xs);
 }
 
 /* ===================================
@@ -622,14 +634,22 @@ h2 {
 
 .paper-footer-links {
     display: flex;
-    gap: 8px;
+    gap: var(--space-xs);
+}
+
+.paper-coming-soon {
+    font-size: 13px;
+    font-style: italic;
+    color: #9aa3ad;
+    padding: var(--space-3xs) 0;
+    white-space: nowrap;
 }
 
 .paper-footer-links a {
     color: var(--link-color);
     text-decoration: none;
     font-size: 13px;
-    padding: 4px 10px;
+    padding: var(--space-3xs) var(--space-xs);
     border: 1px solid var(--link-color);
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -643,7 +663,7 @@ h2 {
 .paper-header-right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: var(--space-xs);
     flex-shrink: 0;
 }
 
@@ -682,14 +702,14 @@ footer {
 
     /* --- navigation: name over links, both centred --- */
     nav {
-        padding: 10px 0 8px;
+        padding: var(--space-xs) 0 var(--space-xs);
     }
 
     .nav-container {
         flex-direction: column;
         align-items: center;
-        gap: 4px;
-        padding: 0 20px;
+        gap: var(--space-3xs);
+        padding: 0 var(--content-padding);
     }
 
     .nav-name {
@@ -697,14 +717,14 @@ footer {
     }
 
     .nav-links {
-        gap: 16px;
+        gap: var(--space-sm);
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .nav-links a {
         font-size: 13px;
-        padding: 4px 2px;   /* larger tap target */
+        padding: var(--space-3xs) 0;   /* larger tap target */
     }
 
     .container {
@@ -750,19 +770,19 @@ footer {
     .intro .bio {
         font-size: 15px;
         max-width: 32em;
-        margin: 18px auto;
+        margin: var(--space-sm) auto;
         text-align: left;   /* the rest of the intro is centred; the paragraph reads better ragged-right */
     }
 
     .intro .interests {
         text-align: center;   /* centres the inline-block list as a whole */
-        margin-bottom: 20px;
+        margin-bottom: var(--space-sm);
     }
 
     .contact-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: var(--space-xs);
     }
 
     .contact-links a {
@@ -780,7 +800,7 @@ footer {
 
     .paper-header {
         flex-direction: column;
-        gap: 10px;
+        gap: var(--space-xs);
     }
 
     .paper-content {
@@ -800,18 +820,18 @@ footer {
 
     .expand-icon {
         align-self: flex-start;
-        padding: 5px 10px;   /* larger tap target */
+        padding: var(--space-2xs) var(--space-xs);   /* larger tap target */
     }
 
     .paper-footer-links a {
-        padding: 5px 10px;
+        padding: var(--space-2xs) var(--space-xs);
     }
 
     /* --- discussions & teaching --- */
     .discussion-item,
     .course-item {
         padding: var(--space-xs) var(--space-sm);
-        margin-bottom: 6px;
+        margin-bottom: var(--space-2xs);
     }
 
     .discussion-link {
@@ -832,11 +852,11 @@ footer {
 
 @media (max-width: 380px) {
     .contact-links a {
-        padding: 6px 10px;
+        padding: var(--space-2xs) var(--space-xs);
         font-size: 13px;
     }
 
     .nav-links {
-        gap: 12px;
+        gap: var(--space-xs);
     }
 }

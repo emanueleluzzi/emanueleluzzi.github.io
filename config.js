@@ -48,10 +48,10 @@ const CONFIG = {
             status: "", 
             prizes: "", 
             conference: [
-                "Frontiers of Factor Investing 2026 (FoFi), Lancaster University",
+                "Frontiers of Factor Investing (FoFi), Lancaster University",
                 "University of Geneva, Brown-Bag",
-                "Financial Econometrics and Machine Learning 2025 (FinEML), Erasmus University Rotterdam",
-                "Society for Financial Econometrics 2025 (SoFiE), ESSEC",
+                "Financial Econometrics and Machine Learning (FinEML), Erasmus University Rotterdam",
+                "Society for Financial Econometrics (SoFiE), ESSEC",
                 "Queen Mary, PhD Student Workshop",
                 "USI Lugano, Brown-Bag",
                 "SFI, PhD Student Workshop"
@@ -75,13 +75,27 @@ const CONFIG = {
      // Work in Progress
     workInProgress: [
         {
+            title: "Flow Hedging and Revealed Beliefs",
+            coauthors: "Solo authored",
+            status: "",
+            conference: [
+                "USI Lugano"
+            ],
+            abstract: "",
+            prizes: "",
+            slides: "",
+            comingSoon: true,
+            figure: "",
+            figureCaption: ""
+        },
+        {
             title: "Optimal Variance Swaps",
             coauthors: "with Paul Schneider and Rohan Sen",
             status: "", 
             conference: [
-                "Society for Financial Econometrics 2026 (SoFiE), University of Macau",
-                "SFI Research Days 2026, Gerzensee",
-                "Financial Econometrics in the Age of Big Data [Poster] 2025, HKUST"
+                "Society for Financial Econometrics (SoFiE), University of Macau",
+                "SFI Research Days, Gerzensee",
+                "Financial Econometrics in the Age of Big Data [Poster], HKUST"
             ],
             abstract: "Which variance swap best captures the preferences of a mean-variance investor? Variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
             prizes: "", 

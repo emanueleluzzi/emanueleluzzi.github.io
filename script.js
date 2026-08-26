@@ -141,7 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 4. PAPER EXPANSION WITH KEYBOARD
     // ===================================
     
-    const paperItems = document.querySelectorAll('.paper-item');
+    // Title-only cards have no expandable panel, so they get no button semantics
+    const paperItems = document.querySelectorAll('.paper-item:not(.paper-item-static)');
     paperItems.forEach(paper => {
         paper.setAttribute('tabindex', '0');
         paper.setAttribute('role', 'button');

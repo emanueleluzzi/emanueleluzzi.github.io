@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function buildPaperHTML(paper) {
         let linksHTML = '';
         if (paper.comingSoon) {
-            linksHTML = '<span style="color: #999;"> </span>';
+            linksHTML = '<span class="paper-coming-soon">Draft coming soon</span>';
         } else {
             if (paper.pdf)      linksHTML += `<a href="${paper.pdf}" target="_blank">PDF</a>`;
             if (paper.ssrn)     linksHTML += `<a href="${paper.ssrn}" target="_blank">SSRN</a>`;
@@ -77,19 +77,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if (paper.appendix) linksHTML += `<a href="${paper.appendix}" target="_blank">Appendix</a>`;
         }
 
-        return `
-            <div class="paper-item" onclick="togglePaper(this)">
-                <div class="paper-title-section">
-                    <div class="paper-title">${paper.title}</div>
-                    ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
-                    <div class="paper-coauthors">${paper.coauthors}</div>
-                    ${buildPresentationsHTML(paper.conference)}
-                    ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
-                </div>
+        // A title-only entry has nothing to reveal, so it gets no "More" control and
+        // isn't clickable — an expander that opens an empty panel reads as broken.
+        const hasDetails = Boolean(paper.abstract || paper.figure);
+
+        const footerHTML = (hasDetails || linksHTML) ? `
                 <div class="paper-footer-row">
-                    <span class="expand-icon">More ›</span>
+                    ${hasDetails ? '<span class="expand-icon">More ›</span>' : '<span></span>'}
                     <div class="paper-footer-links">${linksHTML}</div>
-                </div>
+                </div>` : '';
+
+        const detailsHTML = hasDetails ? `
                 <div class="paper-details">
                     <div class="paper-content">
                         <div class="paper-text">
@@ -102,7 +100,19 @@ document.addEventListener('DOMContentLoaded', function() {
                             ` : ''}
                         </div>
                     </div>
+                </div>` : '';
+
+        return `
+            <div class="paper-item${hasDetails ? '' : ' paper-item-static'}"${hasDetails ? ' onclick="togglePaper(this)"' : ''}>
+                <div class="paper-title-section">
+                    <div class="paper-title">${paper.title}</div>
+                    ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
+                    <div class="paper-coauthors">${paper.coauthors}</div>
+                    ${buildPresentationsHTML(paper.conference)}
+                    ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
                 </div>
+                ${footerHTML}
+                ${detailsHTML}
             </div>
         `;
     }
