@@ -16,14 +16,15 @@ const CONFIG = {
     
     seo: {
         pageTitle: "Emanuele Luzzi",    
-        description: "PhD candidate in Finance at the Swiss Finance Institute and USI Lugano, visiting Boston University Questrom. Asset pricing, asset management, machine learning.",
-        keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Asset Pricing, Asset Management, Financial Econometrics, Financial Intermediation, Machine Learning, Swiss Finance Institute, Swiss, Finance, Institute, Job Market, Lugano, JMP, USI Lugano, Boston University, Questrom, Visiting Scholar"
+        description: "PhD candidate in Finance at Swiss Finance Institute and USI Lugano, visiting Boston University Questrom. Asset pricing, subjective beliefs, machine learning.",
+        keywords: "Emanuele Luzzi, Emanuele, Luzzi, Finance PhD, PhD, Asset Pricing, Asset Management, Delegated Asset Management, Subjective Beliefs, Beliefs, Financial Econometrics, Financial Intermediation, Machine Learning, Swiss Finance Institute, Swiss, Finance, Institute, Job Market, Lugano, JMP, USI Lugano, Boston University, Questrom, Visiting Scholar"
     },
 
     // Research interests (displayed as a bulleted list)
     interests: [
         "Asset Pricing",
-        "Asset Management",
+        "Delegated Asset Management",
+        "Subjective Beliefs",
         "Financial Econometrics"
     ],
     
