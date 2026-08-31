@@ -23,8 +23,8 @@ const CONFIG = {
     // Research interests (displayed as a bulleted list)
     interests: [
         "Asset Pricing",
-        "Asset Management",
         "Behavioural Finance",
+        "Asset Management",
         "Financial Econometrics"
     ],
     
