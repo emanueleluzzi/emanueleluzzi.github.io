@@ -384,6 +384,20 @@ h2 {
     font-style: normal;
 }
 
+/* Coauthor links stay in the muted colour of the line and only announce
+   themselves on hover — a row of blue names would outshout the paper title. */
+.paper-coauthors a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(41, 128, 185, 0.35);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.paper-coauthors a:hover {
+    color: var(--link-color);
+    border-bottom-color: var(--link-color);
+}
+
 .paper-status {
     font-size: 14px;
     color: #2980b9;

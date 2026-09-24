@@ -39,6 +39,13 @@ const CONFIG = {
         cv: "cv.pdf"
     },
     
+    // Coauthor homepages. Any name listed here becomes a link wherever it
+    // appears in a paper's `coauthors` line — add a name once, it links everywhere.
+    coauthorLinks: {
+        "Paul Schneider": "https://sites.google.com/view/paul-schneider",
+        "Rohan Sen": "https://rohansen-8.github.io/research/"
+    },
+
     // Research papers
     papers: [
         {

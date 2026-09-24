@@ -54,6 +54,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===================================
     // HELPER: build a paper block
     // ===================================
+    // Coauthor names -> links to their homepages, per CONFIG.coauthorLinks.
+    // One regex pass (longest names first) so a name is never linked twice.
+    function linkCoauthors(text) {
+        const map = CONFIG.coauthorLinks;
+        if (!text || !map) return text || '';
+
+        const names = Object.keys(map).sort((a, b) => b.length - a.length);
+        if (!names.length) return text;
+
+        const pattern = names
+            .map(n => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+            .join('|');
+
+        return text.replace(new RegExp('(' + pattern + ')', 'g'), name =>
+            `<a href="${map[name]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${name}</a>`
+        );
+    }
+
     // Conferences/seminars -> "Presentations: A · B · C"
     function buildPresentationsHTML(conference) {
         const items = Array.isArray(conference)
@@ -71,10 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (paper.comingSoon) {
             linksHTML = '<span class="paper-coming-soon">Draft coming soon</span>';
         } else {
-            if (paper.pdf)      linksHTML += `<a href="${paper.pdf}" target="_blank">PDF</a>`;
-            if (paper.ssrn)     linksHTML += `<a href="${paper.ssrn}" target="_blank">SSRN</a>`;
-            if (paper.slides)   linksHTML += `<a href="ppt/${paper.slides}" target="_blank">Slides</a>`;
-            if (paper.appendix) linksHTML += `<a href="${paper.appendix}" target="_blank">Appendix</a>`;
+            // stopPropagation so following a link doesn't also expand the card
+            const stop = 'target="_blank" rel="noopener" onclick="event.stopPropagation()"';
+            if (paper.pdf)      linksHTML += `<a href="${paper.pdf}" ${stop}>PDF</a>`;
+            if (paper.ssrn)     linksHTML += `<a href="${paper.ssrn}" ${stop}>SSRN</a>`;
+            if (paper.slides)   linksHTML += `<a href="ppt/${paper.slides}" ${stop}>Slides</a>`;
+            if (paper.appendix) linksHTML += `<a href="${paper.appendix}" ${stop}>Appendix</a>`;
         }
 
         // A title-only entry has nothing to reveal, so it gets no "More" control and
@@ -107,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="paper-title-section">
                     <div class="paper-title">${paper.title}</div>
                     ${paper.status ? `<div class="paper-status">${paper.status}</div>` : ''}
-                    <div class="paper-coauthors">${paper.coauthors}</div>
+                    <div class="paper-coauthors">${linkCoauthors(paper.coauthors)}</div>
                     ${buildPresentationsHTML(paper.conference)}
                     ${paper.prizes ? `<div class="paper-prizes">${paper.prizes}</div>` : ''}
                 </div>
