@@ -23,7 +23,18 @@
     --light-gray: #f5f5f5;
     --border-color: #e0e0e0;
     --link-color: #2980b9;
-    --paperbox-color: #f0f7ff;
+
+    /* Surfaces, after apple.com: flat white tiles on a #f5f5f7 ground, defined
+       by contrast alone — no border, no shadow at rest. Depth appears only on
+       hover, as a soft lift. */
+    --page-bg: #f5f5f7;
+    --card-bg: #ffffff;
+    --card-border: transparent;
+    --card-radius: 18px;
+    --card-shadow: none;
+    --card-shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.08);
+    --hairline: rgba(0, 0, 0, 0.08);
+    --pill: 980px;   /* Apple's pill radius: large enough to round any button */
     
     /* Layout */
     --max-width: 1100px;
@@ -40,7 +51,7 @@
     --space-xl: 68px;
     --space-2xl: 110px;
 
-    --section-spacing: var(--space-2xl);
+    --section-spacing: var(--space-xl);
     --content-padding: var(--space-lg);
 }
 
@@ -51,7 +62,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
     color: var(--text-color);
-    background: white;
+    background: var(--page-bg);
     font-size: 16px;
     /* long titles/URLs must never push the layout sideways on narrow screens */
     overflow-wrap: break-word;
@@ -91,8 +102,10 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: white;
-    border-bottom: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.82);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--hairline);
     z-index: 1000;
     padding: var(--space-sm) 0;
 }
@@ -147,25 +160,11 @@ section {
     scroll-margin-top: var(--space-xl);
 }
 
-/* The divider sits between two sections, so it takes over the gap rather than
-   adding to it — otherwise the space above it is far larger than below. */
-section:has(+ .section-divider) {
-    margin-bottom: 0;
-}
-
-.section-divider {
-    width: 100%;
-    height: 1px;
-    margin: var(--space-xl) 0;
-    background: rgba(0, 0, 0, 0.08);
-}
-
 h2 {
     font-size: 15px;
     font-weight: 600;
-    margin-bottom: var(--space-md);
-    padding-bottom: var(--space-xs);
-    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-3xs);
     color: #6b7785;
     letter-spacing: 1.2px;
     text-transform: uppercase;
@@ -174,7 +173,20 @@ h2 {
 /* ===================================
    7. INTRODUCTION/HOME SECTION - UPDATED
    =================================== */
+/* Every card on the page — intro, papers, discussions, teaching — shares
+   this one recipe, so they read as one system. */
+.intro,
+.paper-item,
+.discussion-item,
+.course-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
 .intro {
+    padding: var(--space-lg);
     margin-bottom: var(--space-xl);
     display: flex;
     gap: var(--space-lg);
@@ -283,8 +295,8 @@ h2 {
     font-size: 14px;
     transition: all 0.3s ease;
     padding: var(--space-2xs) var(--space-sm);
-    border: 1px solid transparent;
-    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--pill);
 }
 
 .contact-links a:hover {
@@ -298,7 +310,7 @@ h2 {
 
 /* Research subsection styling */
 .research-subsection {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
 }
 
 .research-subsection:last-child {
@@ -321,31 +333,15 @@ h2 {
 
 .paper-item {
     margin-bottom: var(--space-sm);
-    padding: var(--space-sm) var(--space-md);
-    background: var(--paperbox-color);
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    padding: var(--space-md);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
     cursor: pointer;
 }
 
+/* Work-in-progress cards are styled identically to working papers — the
+   section heading already says which is which. */
 .paper-item:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-}
-
-.wip-list .paper-item {
-    background: white;
-    border-left: 3px solid #e0e0e0;
-    padding: var(--space-sm) var(--space-md);
-    box-shadow: none;
-}
-
-.wip-list .paper-item:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-left-color: #2980b9;
-}
-
-.paper-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--card-shadow-hover);
 }
 
 /* A card with nothing to expand must not advertise itself as clickable */
@@ -353,10 +349,8 @@ h2 {
     cursor: default;
 }
 
-.paper-item.paper-item-static:hover,
-.wip-list .paper-item.paper-item-static:hover {
-    box-shadow: none;
-    border-left-color: var(--border-color);
+.paper-item.paper-item-static:hover {
+    box-shadow: var(--card-shadow);
 }
 
 .paper-header {
@@ -433,8 +427,8 @@ h2 {
     font-size: 13px;
     color: var(--link-color);
     border: 1px solid var(--link-color);
-    border-radius: 4px;
-    padding: var(--space-3xs) var(--space-xs);
+    border-radius: var(--pill);
+    padding: var(--space-3xs) var(--space-sm);
     white-space: nowrap;
     transition: all 0.2s ease;
     user-select: none;
@@ -485,8 +479,8 @@ h2 {
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 5px;
-    border: 1px solid var(--border-color);
+    border-radius: var(--space-xs);
+    border: 1px solid var(--hairline);
     background: white;
     padding: var(--space-xs);
 }
@@ -548,22 +542,18 @@ h2 {
 
 .discussion-item,
 .course-item {
-    margin-bottom: var(--space-2xs);
-    padding: var(--space-xs) var(--space-sm);
-    background: white;
-    border-left: 3px solid var(--border-color);
-    border-radius: 4px;
+    margin-bottom: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: var(--space-3xs);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.25s ease;
 }
 
 .discussion-item:hover,
 .course-item:hover {
-    border-left-color: var(--link-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--card-shadow-hover);
 }
 
 .discussion-title {
@@ -663,9 +653,9 @@ h2 {
     color: var(--link-color);
     text-decoration: none;
     font-size: 13px;
-    padding: var(--space-3xs) var(--space-xs);
+    padding: var(--space-3xs) var(--space-sm);
     border: 1px solid var(--link-color);
-    border-radius: 4px;
+    border-radius: var(--pill);
     transition: all 0.3s ease;
 }
 
@@ -689,7 +679,7 @@ footer {
     padding: var(--space-lg);
     color: #999;
     font-size: 12px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--hairline);
 }
 
 /* ===================================
@@ -711,7 +701,7 @@ footer {
 @media (max-width: 768px) {
     :root {
         --section-spacing: var(--space-xl);
-        --content-padding: var(--space-md);
+        --content-padding: var(--space-sm);
     }
 
     /* --- navigation: name over links, both centred --- */
@@ -755,6 +745,7 @@ footer {
         align-items: center;
         text-align: center;
         gap: var(--space-md);
+        padding: var(--space-md) var(--space-sm);
         margin-bottom: var(--space-xl);
     }
 
@@ -799,10 +790,6 @@ footer {
         gap: var(--space-xs);
     }
 
-    .contact-links a {
-        border-color: var(--border-color);   /* readable as buttons without hover */
-    }
-
     h2 {
         font-size: 14px;
     }
@@ -834,18 +821,18 @@ footer {
 
     .expand-icon {
         align-self: flex-start;
-        padding: var(--space-2xs) var(--space-xs);   /* larger tap target */
+        padding: var(--space-2xs) var(--space-sm);   /* larger tap target */
     }
 
     .paper-footer-links a {
-        padding: var(--space-2xs) var(--space-xs);
+        padding: var(--space-2xs) var(--space-sm);
     }
 
     /* --- discussions & teaching --- */
     .discussion-item,
     .course-item {
-        padding: var(--space-xs) var(--space-sm);
-        margin-bottom: var(--space-2xs);
+        padding: var(--space-sm);
+        margin-bottom: var(--space-xs);
     }
 
     .discussion-link {

@@ -184,14 +184,6 @@ const CONFIG = {
             semester: "2023",
             level: "",
             description: ""
-        },
-        {
-            title: "Game Theory",
-            role: "Teaching Assistant",
-            employer: "Ulm University | M.Sc. Finance",
-            semester: "2019",
-            level: "",
-            description: ""
         }
     ],
     
