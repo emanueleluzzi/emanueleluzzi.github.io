@@ -123,6 +123,7 @@ nav {
     font-size: 16px;
     font-weight: 500;
     color: var(--primary-color);
+    text-decoration: none;   /* it's a back-to-top link, but should still read as the name */
 }
 
 .nav-links {
@@ -446,14 +447,15 @@ h2 {
     color: white;
 }
 
+/* Expanding is instant: readers skim, so the abstract should be there the
+   moment "More" is clicked, not slide in. display:none also keeps the hidden
+   abstract out of the tab order and screen readers until it's opened. */
 .paper-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    display: none;
 }
 
 .paper-item.expanded .paper-details {
-    max-height: 2000px;
+    display: block;
     margin-top: var(--space-md);
 }
 

@@ -13,10 +13,37 @@ function togglePaper(element) {
         return;
     }
     element.classList.toggle('expanded');
+    const isExpanded = element.classList.contains('expanded');
     const icon = element.querySelector('.expand-icon');
     if (icon) {
-        icon.textContent = element.classList.contains('expanded') ? 'Less ‹' : 'More ›';
+        icon.textContent = isExpanded ? 'Less ‹' : 'More ›';
     }
+
+    // Opening a paper means the reader wants to read it: bring it to them.
+    if (isExpanded) {
+        centerInView(element);
+    }
+}
+
+/**
+ * Scroll so `element` sits centred in the visible area below the fixed nav.
+ * If it is taller than that area, align its top just under the nav instead,
+ * so the title is never scrolled out of sight.
+ */
+function centerInView(element) {
+    const nav = document.querySelector('nav');
+    const navHeight = nav ? nav.offsetHeight : 0;
+    const visible = window.innerHeight - navHeight;
+    const rect = element.getBoundingClientRect();
+
+    const offset = rect.height <= visible
+        ? (visible - rect.height) / 2   // fits: centre it
+        : 16;                           // too tall: top just under the nav
+
+    const target = window.scrollY + rect.top - navHeight - offset;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.scrollTo({ top: Math.max(0, target), behavior: reduceMotion ? 'auto' : 'smooth' });
 }
 
 function toggleMobileNav() {
@@ -65,6 +92,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // ===================================
+    // 1b. NAME IN THE NAV -> BACK TO TOP
+    // ===================================
+
+    // Scrolls to the very top rather than to #home, which would stop short by
+    // the height of the fixed nav. preventDefault keeps a stray "#" out of the URL.
+    const navName = document.querySelector('.nav-name');
+    if (navName) {
+        navName.addEventListener('click', e => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
     // ===================================
     // 2. SMOOTH SCROLLING - FIXED
     // ===================================

@@ -87,6 +87,7 @@ const CONFIG = {
             coauthors: "Solo authored",
             status: "",
             conference: [
+                "American Finance Association (AFA) (Poster, Upcoming)",
                 "USI Lugano"
             ],
             abstract: "",
@@ -103,7 +104,7 @@ const CONFIG = {
             conference: [
                 "Society for Financial Econometrics (SoFiE), University of Macau",
                 "SFI Research Days, Gerzensee",
-                "Financial Econometrics in the Age of Big Data [Poster], HKUST"
+                "Financial Econometrics in the Age of Big Data (Poster), HKUST"
             ],
             abstract: "Which variance swap best captures the preferences of a mean-variance investor? Variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
             prizes: "", 
