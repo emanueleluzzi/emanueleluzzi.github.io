@@ -29,7 +29,9 @@ const CONFIG = {
     ],
     
     // Bio paragraph
-    bio:  "My research infers the beliefs and preferences of investors and intermediaries from the returns they earn and the portfolios they hold, using structural estimation and machine learning.",
+    // Optional; leave empty to show no bio paragraph.
+    // Last used: "My research infers the beliefs and preferences of investors and intermediaries from the returns they earn and the portfolios they hold, using structural estimation and machine learning."
+    bio:  "",
     
     // Contact links
     links: {

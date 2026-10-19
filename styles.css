@@ -235,7 +235,7 @@ h2 {
 }
 
 .intro .visiting {
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);   /* gap to the research interests (or the bio, if one is set) */
     text-wrap: balance;   /* keeps the two centred lines even on narrow screens */
 }
 

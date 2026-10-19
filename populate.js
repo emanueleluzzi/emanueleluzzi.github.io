@@ -28,7 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.profile-image').src = CONFIG.profileImage;
     document.querySelector('.profile-image').alt = CONFIG.name;
 
-    document.querySelector('.intro .bio').textContent = CONFIG.bio;
+    // Optional bio: only rendered when CONFIG.bio is non-empty
+    if (CONFIG.bio) {
+        const bioEl = document.createElement('div');
+        bioEl.className = 'bio';
+        bioEl.textContent = CONFIG.bio;
+        document.querySelector('.intro .interests').before(bioEl);
+    }
 
     // Research interests -> bulleted list (accepts an array or a comma-separated string)
     const interestsEl = document.querySelector('.intro .interests');
