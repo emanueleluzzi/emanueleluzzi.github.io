@@ -719,18 +719,19 @@ footer {
     }
 
     .nav-name {
-        font-size: 15px;
+        font-size: 17px;   /* stays a step above the links so it still reads as the header */
     }
 
+    /* Only three links now, so they can be larger and easier to tap */
     .nav-links {
-        gap: var(--space-sm);
+        gap: var(--space-md);
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .nav-links a {
-        font-size: 13px;
-        padding: var(--space-3xs) 0;   /* larger tap target */
+        font-size: 15px;
+        padding: var(--space-2xs) 0;   /* larger tap target */
     }
 
     .container {
@@ -860,6 +861,6 @@ footer {
     }
 
     .nav-links {
-        gap: var(--space-xs);
+        gap: var(--space-sm);
     }
 }
