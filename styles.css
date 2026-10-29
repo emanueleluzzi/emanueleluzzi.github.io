@@ -417,6 +417,19 @@ h2 {
     color: #c3c9d1;
 }
 
+/* Dagger marking a talk given by a coauthor, and the one-line note explaining it */
+.conf-mark {
+    font-size: 0.75em;
+    line-height: 0;
+    margin-left: 1px;
+}
+
+.conf-note {
+    font-size: 12px;
+    color: #9aa3ad;
+    margin-top: var(--space-3xs);
+}
+
 .paper-prizes {
     font-size: 14px;
     color: #27ae60;

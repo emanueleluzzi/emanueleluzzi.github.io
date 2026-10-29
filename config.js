@@ -104,6 +104,8 @@ const CONFIG = {
             coauthors: "with Paul Schneider and Rohan Sen",
             status: "", 
             conference: [
+                // byCoauthor: true marks a talk given by a coauthor (shown with a † and a note)
+                { name: "Financial Econometrics and Machine Learning (FinEML) (Upcoming), University of Geneva", byCoauthor: true },
                 "Society for Financial Econometrics (SoFiE), University of Macau",
                 "SFI Research Days, Gerzensee",
                 "Financial Econometrics in the Age of Big Data (Poster), HKUST"

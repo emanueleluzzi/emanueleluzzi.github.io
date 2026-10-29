@@ -84,10 +84,25 @@ document.addEventListener('DOMContentLoaded', function() {
             ? conference
             : (conference || '').split(',').map(s => s.trim()).filter(Boolean);
         if (!items.length) return '';
+
+        // An entry is either a string, or { name, byCoauthor: true } for a talk
+        // given by a coauthor — marked with a dagger and explained in a note.
+        let anyByCoauthor = false;
+        const names = items.map(item => {
+            if (typeof item === 'string') return item;
+            if (item.byCoauthor) anyByCoauthor = true;
+            return item.byCoauthor
+                ? `${item.name}<sup class="conf-mark">†</sup>`
+                : item.name;
+        });
+
         // The &nbsp; keeps the dot attached to the item before it, so a line
         // never starts with a stray separator.
-        const list = items.join('<span class="conf-sep">&nbsp;·</span> ');
-        return `<div class="paper-conference"><span class="presentations-label">Presentations:</span> ${list}</div>`;
+        const list = names.join('<span class="conf-sep">&nbsp;·</span> ');
+        const note = anyByCoauthor
+            ? '<div class="conf-note"><sup class="conf-mark">†</sup>Presented by a coauthor.</div>'
+            : '';
+        return `<div class="paper-conference"><span class="presentations-label">Presentations:</span> ${list}</div>${note}`;
     }
 
     function buildPaperHTML(paper) {
