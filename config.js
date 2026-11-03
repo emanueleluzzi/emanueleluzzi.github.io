@@ -58,13 +58,13 @@ const CONFIG = {
             status: "", 
             prizes: "", 
             conference: [
-                "Frontiers of Factor Investing (FoFi), Lancaster University",
+                "Frontiers of Factor Investing Conference",
+                "SoFiE Annual Conference",
+                "Financial Econometrics Meets Machine Learning (FinEML)",
+                "Queen Mary Economics and Finance PhD Workshop",
+                "Swiss Finance Institute PhD Workshop",
                 "University of Geneva, Brown-Bag",
-                "Financial Econometrics and Machine Learning (FinEML), Erasmus University Rotterdam",
-                "Society for Financial Econometrics (SoFiE), ESSEC",
-                "Queen Mary, PhD Student Workshop",
-                "USI Lugano, Brown-Bag",
-                "SFI, PhD Student Workshop"
+                "USI Lugano, Brown-Bag"
             ],
             ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5634612",
             slides: "",
@@ -89,7 +89,7 @@ const CONFIG = {
             coauthors: "Solo authored",
             status: "",
             conference: [
-                "American Finance Association (AFA) (Poster, Upcoming)",
+                "AFA Annual Meeting (Poster, Upcoming)",
                 "USI Lugano"
             ],
             abstract: "",
@@ -105,10 +105,10 @@ const CONFIG = {
             status: "", 
             conference: [
                 // byCoauthor: true marks a talk given by a coauthor (shown with a † and a note)
-                { name: "Financial Econometrics and Machine Learning (FinEML) (Upcoming), University of Geneva", byCoauthor: true },
-                "Society for Financial Econometrics (SoFiE), University of Macau",
+                { name: "Financial Econometrics Meets Machine Learning (FinEML) (Upcoming)", byCoauthor: true },
+                "SoFiE Annual Conference",
                 "SFI Research Days, Gerzensee",
-                "Financial Econometrics in the Age of Big Data (Poster), HKUST"
+                "HKUST Financial Econometrics in the Big Data Era (Poster)"
             ],
             abstract: "Which variance swap best captures the preferences of a mean-variance investor? Variance swaps, such as the trading strategy replicating the VIX, are problematic in an investment context. We estimate the option portfolio weights and the hedge ratios replicating variance swaps that are optimal with respect to the Sharpe ratio nonparametrically.",
             prizes: "", 
