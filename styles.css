@@ -521,7 +521,8 @@ h2 {
     line-height: 1.8;
     color: #555;
     margin-bottom: var(--space-sm);
-    text-align: justify;
+    /* left-aligned: justified text without hyphenation stretches word gaps unevenly */
+    text-align: left;
 }
 
 .paper-links {
@@ -848,7 +849,6 @@ footer {
     }
 
     .abstract-text {
-        text-align: left;   /* justified text leaves ugly gaps on narrow screens */
         font-size: 16px;
     }
 
