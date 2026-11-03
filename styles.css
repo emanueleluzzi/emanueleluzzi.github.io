@@ -37,7 +37,7 @@
     --pill: 980px;   /* Apple's pill radius: large enough to round any button */
     
     /* Layout */
-    --max-width: 1100px;
+    --max-width: 980px;
     --nav-height: 60px;
     
     /* Spacing — golden-ratio ladder (x1.618) off a 16px base.
@@ -63,7 +63,7 @@ body {
     line-height: 1.7;
     color: var(--text-color);
     background: var(--page-bg);
-    font-size: 16px;
+    font-size: 17px;
     /* long titles/URLs must never push the layout sideways on narrow screens */
     overflow-wrap: break-word;
 }
@@ -120,7 +120,7 @@ nav {
 }
 
 .nav-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--primary-color);
     text-decoration: none;   /* it's a back-to-top link, but should still read as the name */
@@ -134,7 +134,7 @@ nav {
 .nav-links a {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.3s ease;
     font-weight: 400;
 }
@@ -162,7 +162,7 @@ section {
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: var(--space-sm);
     padding-left: var(--space-3xs);
@@ -199,8 +199,8 @@ h2 {
 }
 
 .profile-image {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     background: var(--light-gray);
@@ -212,7 +212,7 @@ h2 {
 }
 
 .intro h1 {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 600;
     margin-bottom: var(--space-xs);
     color: var(--primary-color);
@@ -220,7 +220,7 @@ h2 {
 }
 
 .intro .subtitle {
-    font-size: 18px;
+    font-size: 21px;
     color: #666;
     margin-bottom: var(--space-xs);
     font-weight: 400;
@@ -230,7 +230,7 @@ h2 {
    last of them carries the gap (the bio's top margin collapses into it). */
 .intro .affiliation,
 .intro .visiting {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
 }
 
@@ -240,14 +240,14 @@ h2 {
 }
 
 .intro .interests {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     margin-bottom: var(--space-md);
 }
 
 .interests-label {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.8px;
     text-transform: uppercase;
@@ -265,7 +265,7 @@ h2 {
 }
 
 .interests-list li {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     line-height: 1.6;
 }
@@ -276,7 +276,7 @@ h2 {
 
 /* Bio - More prominent, direct style */
 .intro .bio {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
     color: #444;
     margin-top: var(--space-md);
@@ -293,7 +293,7 @@ h2 {
 .contact-links a {
     color: var(--link-color);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     transition: all 0.3s ease;
     padding: var(--space-2xs) var(--space-sm);
     border: 1px solid var(--border-color);
@@ -319,7 +319,7 @@ h2 {
 }
 
 .subsection-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
     color: var(--primary-color);
     margin-bottom: var(--space-md);
@@ -366,14 +366,14 @@ h2 {
 }
 
 .paper-title {
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 600;
     color: var(--primary-color);
     line-height: 1.5;
 }
 
 .paper-coauthors {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     margin-top: var(--space-3xs);
     font-style: normal;
@@ -394,14 +394,14 @@ h2 {
 }
 
 .paper-status {
-    font-size: 14px;
+    font-size: 16px;
     color: #2980b9;
     margin-top: var(--space-3xs);
     font-weight: 500;
 }
 
 .paper-conference {
-    font-size: 13px;
+    font-size: 15px;
     color: #888;
     margin-top: var(--space-2xs);
     line-height: 1.65;
@@ -425,20 +425,20 @@ h2 {
 }
 
 .conf-note {
-    font-size: 12px;
+    font-size: 13px;
     color: #9aa3ad;
     margin-top: var(--space-3xs);
 }
 
 .paper-prizes {
-    font-size: 14px;
+    font-size: 16px;
     color: #27ae60;
     margin-top: var(--space-3xs);
     font-weight: 500;
 }
 
 .expand-icon {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--link-color);
     border: 1px solid var(--link-color);
     border-radius: var(--pill);
@@ -501,7 +501,7 @@ h2 {
 }
 
 .figure-caption {
-    font-size: 12px;
+    font-size: 13px;
     color: #666;
     margin-top: var(--space-xs);
     font-style: italic;
@@ -511,13 +511,13 @@ h2 {
     font-weight: 500;
     color: var(--primary-color);
     margin-bottom: var(--space-xs);
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .abstract-text {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.8;
     color: #555;
     margin-bottom: var(--space-sm);
@@ -533,7 +533,7 @@ h2 {
 .paper-links a {
     color: var(--link-color);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     padding: var(--space-2xs) var(--space-xs);
     border: 1px solid var(--link-color);
     border-radius: 4px;
@@ -551,7 +551,7 @@ h2 {
 
 .discussions-content,
 .teaching-content {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.5;
 }
 
@@ -574,7 +574,7 @@ h2 {
 .discussion-title {
     font-weight: 400;
     color: var(--primary-color);
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 0;
     width: 100%;
 }
@@ -582,13 +582,13 @@ h2 {
 .course-title {
     font-weight: 400;
     color: var(--primary-color);
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 0;
 }
 
 .discussion-authors {
     color: #666;
-    font-size: 13px;
+    font-size: 15px;
     font-style: normal;
     margin-bottom: 0;
 }
@@ -596,7 +596,7 @@ h2 {
 .course-role {
     width: 100%;
     color: #666;
-    font-size: 13px;
+    font-size: 15px;
     font-style: normal;
     margin-top: 1px;
     margin-bottom: 0;
@@ -605,19 +605,19 @@ h2 {
 .discussion-sep,
 .course-sep {
     color: #bbb;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .discussion-date {
     color: #888;
-    font-size: 13px;
+    font-size: 15px;
     font-style: italic;
     margin-bottom: 0;
 }
 
 .course-details {
     color: #888;
-    font-size: 13px;
+    font-size: 15px;
     font-style: normal;
     margin-bottom: 0;
 }
@@ -626,7 +626,7 @@ h2 {
     margin-left: auto;
     color: var(--link-color);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .discussion-link:hover {
@@ -636,7 +636,7 @@ h2 {
 .course-description,
 .discussion-desc {
     width: 100%;
-    font-size: 13px;
+    font-size: 15px;
     color: #555;
     margin-top: var(--space-3xs);
 }
@@ -657,7 +657,7 @@ h2 {
 }
 
 .paper-coming-soon {
-    font-size: 13px;
+    font-size: 14px;
     font-style: italic;
     color: #9aa3ad;
     padding: var(--space-3xs) 0;
@@ -667,7 +667,7 @@ h2 {
 .paper-footer-links a {
     color: var(--link-color);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     padding: var(--space-3xs) var(--space-sm);
     border: 1px solid var(--link-color);
     border-radius: var(--pill);
@@ -693,7 +693,7 @@ footer {
     text-align: center;
     padding: var(--space-lg);
     color: #999;
-    font-size: 12px;
+    font-size: 13px;
     border-top: 1px solid var(--hairline);
 }
 
@@ -772,16 +772,16 @@ footer {
     .profile-image {
         display: block;
         margin: 0 auto;
-        width: 140px;
-        height: 140px;
+        width: 150px;
+        height: 150px;
     }
 
     .intro h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .intro .subtitle {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .intro .affiliation {
@@ -789,7 +789,7 @@ footer {
     }
 
     .intro .bio {
-        font-size: 15px;
+        font-size: 16px;
         max-width: 32em;
         margin: var(--space-sm) auto;
         text-align: left;   /* the rest of the intro is centred; the paragraph reads better ragged-right */
@@ -810,7 +810,24 @@ footer {
         font-size: 14px;
     }
 
-    /* --- papers --- */
+    /* --- papers: one step below desktop so long presentation lists still fit --- */
+    .paper-title {
+        font-size: 18px;
+    }
+
+    .paper-coauthors {
+        font-size: 15px;
+    }
+
+    .paper-conference {
+        font-size: 14px;
+    }
+
+    .discussion-title,
+    .course-title {
+        font-size: 16px;
+    }
+
     .paper-item {
         padding: var(--space-sm);
     }
@@ -832,7 +849,7 @@ footer {
 
     .abstract-text {
         text-align: left;   /* justified text leaves ugly gaps on narrow screens */
-        font-size: 14.5px;
+        font-size: 16px;
     }
 
     .expand-icon {
@@ -870,7 +887,7 @@ footer {
 @media (max-width: 380px) {
     .contact-links a {
         padding: var(--space-2xs) var(--space-xs);
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .nav-links {
