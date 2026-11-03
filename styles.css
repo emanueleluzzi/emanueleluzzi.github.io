@@ -716,7 +716,7 @@ footer {
 
 @media (max-width: 768px) {
     :root {
-        --section-spacing: var(--space-xl);
+        --section-spacing: var(--space-lg);
         --content-padding: var(--space-sm);
     }
 
@@ -763,7 +763,7 @@ footer {
         text-align: center;
         gap: var(--space-md);
         padding: var(--space-md) var(--space-sm);
-        margin-bottom: var(--space-xl);
+        margin-bottom: var(--space-lg);
     }
 
     .intro-content {
@@ -773,8 +773,8 @@ footer {
     .profile-image {
         display: block;
         margin: 0 auto;
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 
     .intro h1 {
@@ -818,6 +818,7 @@ footer {
 
     .paper-conference {
         font-size: 14px;
+        line-height: 1.55;
     }
 
     .discussion-title,
