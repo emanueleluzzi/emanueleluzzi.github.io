@@ -37,7 +37,7 @@
     --pill: 980px;   /* Apple's pill radius: large enough to round any button */
     
     /* Layout */
-    --max-width: 980px;
+    --max-width: 1240px;   /* wide enough that the page fills the screen like a ~115% zoom */
     --nav-height: 60px;
     
     /* Spacing — golden-ratio ladder (x1.618) off a 16px base.
