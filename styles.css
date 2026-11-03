@@ -807,10 +807,6 @@ footer {
         gap: var(--space-xs);
     }
 
-    h2 {
-        font-size: 14px;
-    }
-
     /* --- papers: one step below desktop so long presentation lists still fit --- */
     .paper-title {
         font-size: 18px;
