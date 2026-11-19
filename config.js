@@ -105,7 +105,7 @@ const CONFIG = {
             status: "", 
             conference: [
                 // byCoauthor: true marks a talk given by a coauthor (shown with a † and a note)
-                { name: "Financial Econometrics Meets Machine Learning (FinEML) (Upcoming)", byCoauthor: true },
+                { name: "Financial Econometrics Meets Machine Learning (FinEML)", byCoauthor: true },
                 "SoFiE Annual Conference",
                 "SFI Research Days, Gerzensee",
                 "HKUST Financial Econometrics in the Big Data Era (Poster)"
