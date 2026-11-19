@@ -85,7 +85,7 @@ const CONFIG = {
      // Work in Progress
     workInProgress: [
         {
-            title: "Flow Hedging and Revealed Beliefs",
+            title: "Mutual Fund Manager Beliefs",
             coauthors: "Solo authored",
             status: "",
             conference: [
